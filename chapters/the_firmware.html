@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Software" href="the_software.html" /><link rel="prev" title="Hardware" href="the_hardware.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Software" href="the_software.html" /><link rel="prev" title="Mechanical Design" href="../hardware/02_mechanical.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
         <title>Firmware - DOGlove</title>
@@ -179,7 +179,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -203,8 +203,19 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="the_hardware.html">Hardware</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quick_start/01_pcba.html">PCB Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_start/02_3d_print.html">3D Print</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_start/03_flash_firmware.html">Flash the Firmware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_start/04_assemble_glove.html">Glove Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_start/05_make_it_move.html">Make it Move</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="the_hardware.html">Hardware</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Hardware</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/01_circuit.html">Circuit Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware/02_mechanical.html">Mechanical Design</a></li>
+</ul>
+</li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Firmware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="the_software.html">Software</a></li>
 </ul>
@@ -241,7 +252,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -249,7 +260,58 @@
         <article role="main" id="furo-main-content">
           <section id="firmware">
 <h1>Firmware<a class="headerlink" href="#firmware" title="Link to this heading">¶</a></h1>
-<p>🚀 Content coming soon. Thanks for your patience!</p>
+<p>The source code of the firmware is listed <a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware">here</a>.</p>
+<section id="use-the-firmware">
+<h2>Use the Firmware<a class="headerlink" href="#use-the-firmware" title="Link to this heading">¶</a></h2>
+<p>You can download the precompiled firmware from the following link and flash it to the STM32:
+<a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/releases/download/v1.0/DOGlove.hex">DOGlove.hex</a></p>
+</section>
+<section id="build-from-source-code">
+<h2>Build from Source Code<a class="headerlink" href="#build-from-source-code" title="Link to this heading">¶</a></h2>
+<p>To build the firmware from source:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/doublehan07/DOGlove_Firmware.git
+<span class="nb">cd</span><span class="w"> </span>DOGlove_Firmware
+make
+</pre></div>
+</div>
+<blockquote>
+<div><p>💡 Note: You may need to install <a class="reference external" href="https://developer.arm.com/downloads/-/gnu-rm">arm-none-eabi-gcc</a> to compile the firmware.</p>
+</div></blockquote>
+</section>
+<section id="notes-for-advanced-developers">
+<h2>Notes for Advanced Developers<a class="headerlink" href="#notes-for-advanced-developers" title="Link to this heading">¶</a></h2>
+<p>To modify the firmware or view pin configurations, open the <a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/blob/main/DOGlove.ioc">DOGlove.ioc</a> file using <a class="reference external" href="https://www.st.com/en/development-tools/stm32cubemx.html">STM32CubeMX</a>.</p>
+<section id="pin-allocation">
+<h3>Pin Allocation<a class="headerlink" href="#pin-allocation" title="Link to this heading">¶</a></h3>
+<p><img alt="Pin Allocation" src="../_images/pin_allocation.jpg" /></p>
+</section>
+<section id="clock-tree-configuration">
+<h3>Clock Tree Configuration<a class="headerlink" href="#clock-tree-configuration" title="Link to this heading">¶</a></h3>
+<p><img alt="Clock Tree" src="../_images/clock_tree.jpg" /></p>
+</section>
+<section id="source-code-structure">
+<h3>Source Code Structure<a class="headerlink" href="#source-code-structure" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/tree/main/Core">/Core</a>: <em>(Auto-generated by STM32CubeMX, except for <code class="docutils literal notranslate"><span class="pre">main.c</span></code> and <code class="docutils literal notranslate"><span class="pre">stm32f0xx_it.c</span></code>)</em></p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/blob/main/Core/Src/main.c">main.c</a>: System initialization, LRA control, and encoder data packaging.</p></li>
+<li><p><a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/blob/main/Core/Src/stm32f0xx_it.c">stm32f0xx_it.c</a>: SysTick handler used for system-level scheduling.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/tree/main/Drivers">/Drivers</a>: STM32 HAL drivers <em>(auto-generated)</em></p></li>
+<li><p><a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/tree/main/Users">/Users</a>: Custom drivers and application code.</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/blob/main/Users/ads1256.c">ads1256.c</a>: ADC driver for the ADS1256 chip.</p></li>
+<li><p><a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/blob/main/Users/drv2605l.c">drv2605l.c</a>: Haptic driver for the DRV2605L chip.</p></li>
+<li><p><a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/blob/main/Users/tca9548a.c">tca9548a.c</a>: I2C multiplexer driver for the TCA9548A chip.</p></li>
+<li><p><a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/blob/main/Users/fsr.c">fsr.c</a>: Reads power supply voltage via STM32’s internal ADC.</p></li>
+<li><p><a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/blob/main/Users/delay.c">delay.c</a>: Implements precise millisecond-level delay.</p></li>
+<li><p><a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware/blob/main/Users/lra_control.c">lra_control.c</a>: LRA control logic and UART RX event callback.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
 </section>
 
         </article>
@@ -266,14 +328,14 @@
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="the_hardware.html">
+          <a class="prev-page" href="../hardware/02_mechanical.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Hardware</div>
+                <div class="title">Mechanical Design</div>
                 
               </div>
             </a>
@@ -295,8 +357,34 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Firmware</a><ul>
+<li><a class="reference internal" href="#use-the-firmware">Use the Firmware</a></li>
+<li><a class="reference internal" href="#build-from-source-code">Build from Source Code</a></li>
+<li><a class="reference internal" href="#notes-for-advanced-developers">Notes for Advanced Developers</a><ul>
+<li><a class="reference internal" href="#pin-allocation">Pin Allocation</a></li>
+<li><a class="reference internal" href="#clock-tree-configuration">Clock Tree Configuration</a></li>
+<li><a class="reference internal" href="#source-code-structure">Source Code Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

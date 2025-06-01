@@ -203,8 +203,19 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul>
-<li class="toctree-l1"><a class="reference internal" href="chapters/getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapters/the_hardware.html">Hardware</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="chapters/getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick_start/01_pcba.html">PCB Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start/02_3d_print.html">3D Print</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start/03_flash_firmware.html">Flash the Firmware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start/04_assemble_glove.html">Glove Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick_start/05_make_it_move.html">Make it Move</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="chapters/the_hardware.html">Hardware</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Hardware</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/01_circuit.html">Circuit Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/02_mechanical.html">Mechanical Design</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="chapters/the_firmware.html">Firmware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapters/the_software.html">Software</a></li>
 </ul>
@@ -251,7 +262,14 @@
 <h1>DOGlove<a class="headerlink" href="#doglove" title="Link to this heading">¶</a></h1>
 <p>DOGlove is a low-cost, open-source haptic+force feedback glove designed for dexterous manipulation and teleoperation.</p>
 <p>Check out some useful links below to learn more:</p>
-<p><a class="reference external" href="https://do-glove.github.io/">🌐 Website</a> | <a class="reference external" href="https://arxiv.org/pdf/2502.07730">📄 Paper</a> | <a class="reference external" href="https://www.youtube.com/watch?v=2qO7dbH9zxc">🎥 Video</a> | <a class="reference external" href="https://x.com/DoubleHan07/status/1889815837810499688">𝕏 Tweet</a> | <a class="reference external" href="https://cad.onshape.com/documents/7fa03943c40f265f7147311f">🧩 Onshape</a></p>
+<p><a class="reference external" href="https://do-glove.github.io/">🌐 Website</a> |
+<a class="reference external" href="https://arxiv.org/pdf/2502.07730">📄 Paper</a> |
+<a class="reference external" href="https://www.youtube.com/watch?v=2qO7dbH9zxc">🎥 Video</a> |
+<a class="reference external" href="https://x.com/DoubleHan07/status/1889815837810499688">𝕏 Tweet</a></p>
+<p><a class="reference external" href="https://cad.onshape.com/documents/7fa03943c40f265f7147311f">🧩 Onshape: 3D Model</a></p>
+<p><a class="reference external" href="https://makerworld.com/en/models/1476400-doglove#profileId-1541008">🛠️ MakerWorld: Bambu 3mf Files</a></p>
+<p><a class="reference external" href="https://oshwhub.com/doublehan/doglove_mainboard">📟 Circuit Board: OSHWHub (lceda)</a></p>
+<p><a class="reference external" href="https://github.com/doublehan07/DOGlove_Firmware">⚙️ Firmware: STM32 Source Code</a></p>
 <hr class="docutils" />
 <section id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h2>
@@ -259,15 +277,20 @@
 <p>If you’re new to DOGlove, the easiest way is to follow the step-by-step tutorial☝️.<br />
 For experienced developers, we also highlight the key steps below👇:</p>
 <ul class="simple">
-<li><p><strong>Build the hardware</strong>: Follow the <a class="reference internal" href="chapters/the_hardware.html"><span class="doc std std-doc">hardware</span></a> tutorial to assemble your DOGlove.</p></li>
-<li><p><strong>Flash the embedded firmware</strong>: Check out the <a class="reference internal" href="chapters/the_firmware.html"><span class="doc std std-doc">firmware</span></a> script.</p></li>
-<li><p><strong>Bring it to life</strong>: Quick link to set up the <a class="reference internal" href="chapters/the_software.html"><span class="doc std std-doc">software</span></a>.</p></li>
+<li><p><strong>Build the hardware</strong>: Follow the <a class="reference internal" href="quick_start/04_assemble_glove.html"><span class="doc std std-doc">hardware</span></a> tutorial to assemble your DOGlove.</p></li>
+<li><p><strong>Flash the embedded firmware</strong>: Check out the <a class="reference internal" href="quick_start/03_flash_firmware.html"><span class="doc std std-doc">firmware</span></a> script.</p></li>
+<li><p><strong>Bring it to life</strong>: Quick link to set up the <a class="reference internal" href="quick_start/05_make_it_move.html"><span class="doc std std-doc">software</span></a>.</p></li>
 </ul>
 </section>
 <section id="customizing">
 <h2>Customizing<a class="headerlink" href="#customizing" title="Link to this heading">¶</a></h2>
 <p>Want to customize your DOGlove, explore the key design ideas, or contribute to the project?<br />
 Check out the following sections for more details!</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="chapters/the_hardware.html"><span class="doc std std-doc">Hardware</span></a>: Circuit design details and 3D printable models.</p></li>
+<li><p><a class="reference internal" href="chapters/the_firmware.html"><span class="doc std std-doc">Firmware</span></a>: Embedded firmware that runs on DOGlove.</p></li>
+<li><p><a class="reference internal" href="chapters/the_software.html"><span class="doc std std-doc">Software</span></a>: Python API and interface to control DOGlove.</p></li>
+</ul>
 </section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h2>
