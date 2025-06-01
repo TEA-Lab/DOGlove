@@ -21,8 +21,11 @@
   <img src="teaser.jpg" alt="teaser" width="100%">
 </div>
 
-## 🐣 Update
-* **2025/04/28**, initial commit.
+## 🐣 Updates
+* **2025/04/28** — Initial commit.
+* **2025/05/11** — Added embedded firmware repository.
+* **2025/06/01** — Added MakerWorld link, PCBA files, and Onshape model link.
+
 
 🚀 Content coming soon. Thanks for your patience!
 
