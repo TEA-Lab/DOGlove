@@ -179,7 +179,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -252,7 +252,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -260,9 +260,348 @@
         <article role="main" id="furo-main-content">
           <section id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h1>
-<p>🚀 Content coming soon. Thanks for your patience!</p>
 <div class="toctree-wrapper compound">
 </div>
+<section id="before-you-start">
+<h2>Before You Start<a class="headerlink" href="#before-you-start" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Check our <a class="reference internal" href="#hardware-bill-of-materials">hardware bill of materials (BOM)</a> to make sure you have everything.</p></li>
+<li><p><a class="reference internal" href="../quick_start/01_pcba.html"><span class="doc std std-doc">Order the PCBA</span></a>.</p></li>
+<li><p><a class="reference internal" href="../quick_start/02_3d_print.html"><span class="doc std std-doc">Print the mechanical structures</span></a>.</p></li>
+<li><p>The whole system has been tested under <strong>Ubuntu 20.04</strong>.</p></li>
+</ol>
+</section>
+<section id="hardware-bill-of-materials">
+<span id="id1"></span><h2>Hardware Bill of Materials<a class="headerlink" href="#hardware-bill-of-materials" title="Link to this heading">¶</a></h2>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Component</p></th>
+<th class="head text-right"><p>Quantity</p></th>
+<th class="head text-left"><p>Purchase Link</p></th>
+<th class="head text-left"><p>Purchase Link (China)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>3D Print Filament</strong></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Bambu PETG Basic (Gold)</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://us.store.bambulab.com/products/petg-hf?id=42735939649672">Bambu Store</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/10076951987144.html">JD</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Bambu PETG HF (White)</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://us.store.bambulab.com/products/petg-hf?id=42735939846280">Bambu Store</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/10098873650763.html">JD</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Bambu Support for PLA/PETG</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://us.store.bambulab.com/products/support-for-pla-petg">Bambu Store</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/10100641558676.html">JD</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Bambu TPU for AMS (White)</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://us.store.bambulab.com/products/tpu-for-ams?id=43059884720264">Bambu Store</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/10120952202960.html">JD</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Dynamixel Parts</strong></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Dynamixel XC330-M288-T</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.robotis.us/dynamixel-xc330-m288-t/">Dynamixel Store</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?_u=m2pu41081584&amp;amp;id=660146504579&amp;amp;skuId=4941606395637">Taobao</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Dynamixel XL330-M288-T</p></td>
+<td class="text-right"><p>3</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.robotis.us/dynamixel-xl330-m288-t/">Dynamixel Store</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?_u=m2pu410853f0&amp;amp;id=648175925849">Taobao</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>ROBOTIS U2D2 USB Communication Converter</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.robotis.us/u2d2/">Dynamixel Store</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?_u=m2pu4108eef4&amp;amp;id=564915402895">Taobao</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>ROBOTIS Cable-X3P 100mm</p></td>
+<td class="text-right"><p>4</p></td>
+<td class="text-left"><p>Temporarily unavailable (non-critical)</p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?_u=m2pu41088bc7&amp;amp;id=559824480883&amp;amp;skuId=3659974074027">Taobao</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Mechanical Parts</strong></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>M2x10mm Button Head Screw</p></td>
+<td class="text-right"><p>12</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.mcmaster.com/97763A409/">97763A409</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=637524754721&amp;amp;skuId=4742801506990">M2x10十字圆头</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>M2x12mm Button Head Screw</p></td>
+<td class="text-right"><p>10</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.mcmaster.com/92095A455/">92095A455</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=637524754721&amp;amp;skuId=4742801506984">M2x12十字圆头</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>M2x20+3mm Single Through Copper Standoff</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/ZZHXSM-320PCS-Hexagonal-Motherboard-Computer/dp/B0DHKTWMPH/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=534855987272&amp;amp;skuId=5775647192461">M2x20+3单通滚花铜柱</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>M2x20mm Dual Through Copper Standoff</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/ZZHXSM-320PCS-Hexagonal-Motherboard-Computer/dp/B0DHKTWMPH/">As provided above</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=534855987272&amp;amp;skuId=5942557358119">M2x20双通滚花铜柱</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>M2x5mm Self-Tapping Screw</p></td>
+<td class="text-right"><p>20</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.mcmaster.com/90380A325/">90380A325</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=535345606154&amp;amp;skuId=4327300926628">M2x5十字圆头割尾</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>M2x6mm Self-Tapping Screw</p></td>
+<td class="text-right"><p>16</p></td>
+<td class="text-left"><p>(From servo box)</p></td>
+<td class="text-left"><p>(From servo box)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>M2x8mm Self-Tapping Screw</p></td>
+<td class="text-right"><p>20</p></td>
+<td class="text-left"><p>(From servo box)</p></td>
+<td class="text-left"><p>(From servo box)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>M2x5x0.3mm Washer</p></td>
+<td class="text-right"><p>12</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Washers-Stainless-Assortment-Sizes%EF%BC%88M2-Industrial/dp/B0CBJZNDN4/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=736651447364&amp;amp;skuId=5800439948793">M2x5x0.3平垫片</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>M2 Lock Nut</p></td>
+<td class="text-right"><p>10</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/M2-0-3-Insert-Locknuts-Stainless-Clinching/dp/B0DR93VFYG/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=763443678130&amp;amp;skuId=5254837848373">M2防松螺母</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>M2 Hex Nut</p></td>
+<td class="text-right"><p>10</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.mcmaster.com/90592A075/">90592A075</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=549640610734&amp;amp;skuId=3507734575864">M2螺母</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>M3x10mm Button Head Screw</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.mcmaster.com/92095A182/">92095A182</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=637524754721&amp;amp;skuId=4742801506977">M3x10十字圆头</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>M3x30mm Button Head Screw</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.mcmaster.com/92095A187/">92095A187</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=637524754721&amp;amp;skuId=4742801506999">M3x30十字圆头</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>M3x15mm D-Shape Shaft Screw</p></td>
+<td class="text-right"><p>16</p></td>
+<td class="text-left"><p>—</p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?ft=t&amp;amp;id=935960628369">Purchase directly from factory</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>M3x20mm Dual Through Copper Standoff</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Csdtylh-Male-Female-Standoff-Stainless-Assortment/dp/B06Y5TJXY1/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=542213588710&amp;amp;skuId=3258324297349">M3x20双通铜柱</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>M3 Lock Nut</p></td>
+<td class="text-right"><p>12</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Yinpecly-Stainless-Self-Locking-Industrial-Construction/dp/B0F1MSSVQP/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=763443678130&amp;amp;skuId=5740530721046">M3防松螺母</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>M4x10mm Button Head Screw</p></td>
+<td class="text-right"><p>14</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.mcmaster.com/92095A190/">92095A190</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=637524754721&amp;amp;skuId=4742801506971">M4x10十字圆头</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>M4x15mm Dual Through Copper Standoff</p></td>
+<td class="text-right"><p>4</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Standoff-Motherboard-Hexagon-Spacer-Assortment/dp/B09X358Q73/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=542213588710&amp;amp;skuId=4348642093877">M4x15双通铜柱</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>M4x20mm Dual Through Copper Standoff</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Standoff-Motherboard-Hexagon-Spacer-Assortment/dp/B09X358Q73/">As provided above</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=542213588710&amp;amp;skuId=4348642093875">M4x20双通铜柱</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>M4 Thin-Profile Hex Nut</p></td>
+<td class="text-right"><p>4</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.mcmaster.com/90710A035/">90710A035</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?_u=m2pu410880c4&amp;amp;id=533915610076&amp;amp;skuId=4937683182274">M4扁薄六角螺母</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>7x4x2.5mm Bearing</p></td>
+<td class="text-right"><p>16</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/uxcell-Bearings-4x7x2-5mm-Miniature-Precision/dp/B0CM6RYCC7/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?_u=m2pu41088525&amp;amp;id=743100333785&amp;amp;skuId=5123565292062">MR74-ZZ P5【4<em>7</em>2.5】轴承</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>0.6mm 7x7 Stainless Steel Wire Rope</p></td>
+<td class="text-right"><p>25ft / 10m</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.mcmaster.com/3461T07/">3461T07</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?_u=m2pu4108c68a&amp;amp;id=574480300292&amp;amp;skuId=3929526017813">钢丝绳</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>M3x25mm Headless Clevis Pin</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.mcmaster.com/93890A703/">93890A703</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?_u=m2pu41084dab&amp;amp;id=755183277159&amp;amp;skuId=5205582448931">M3x25双头卡簧销轴</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>M2 Circlip</p></td>
+<td class="text-right"><p>10</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Circlip-External-Retaining-Stainless-Assortment/dp/B0BNB39FKY/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?_u=m2pu41083fee&amp;amp;id=557748539457&amp;amp;skuId=5002991824253">M2-e型卡簧挡圈</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>M4x25mm Headless Clevis Pin</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.mcmaster.com/93890A707/">93890A707</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?_u=m2pu41084dab&amp;amp;id=755183277159&amp;amp;skuId=5205582448938">M4x25双头卡簧销轴</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>M3 Circlip</p></td>
+<td class="text-right"><p>10</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Circlip-External-Retaining-Stainless-Assortment/dp/B0BNB39FKY/">As provided above</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?_u=m2pu41083fee&amp;amp;id=557748539457&amp;amp;skuId=4902892140873">M3-e型卡簧挡圈</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Electronics</strong></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>RDC506 Encoder</p></td>
+<td class="text-right"><p>16</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.digikey.com/en/products/detail/alps-alpine/RDC506018A/19529120">DigiKey</a>, <a class="reference external" href="https://www.mouser.com/ProductDetail/Alps-Alpine/RDC506018A?qs=j%252B1pi9TdxUZl0Obrq5eEAQ%3D%3D">Mouser</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.szlcsc.com/116589.html">LCSC-RDC506002A</a>, <a class="reference external" href="https://item.szlcsc.com/364160.html">LCSC-RDC506018A</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>LRA0825 Haptic Motor</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.digikey.com/en/products/detail/jie-yi-electronics-limited/JYLRA0825Z/22519426">JYLRA0825Z</a>, <a class="reference external" href="https://www.digikey.com/en/products/detail/ineed-motor/LRA0825BC-0167F/21840080">LRA0825BC-0167F</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.szlcsc.com/6552539.html">LCSC-LD0825BC-0169F</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>USB to TTL Module</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/JESSINIE-Module-CH343-Communication-Microcontroller/dp/B0D6352BS9/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?_u=m2pu41088297&amp;amp;id=674671646143&amp;amp;skuId=4849832708260">nanoUART</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Cables</strong></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>PH2.0 Pre-Crimped Wire, 15cm (R/Y/B)</p></td>
+<td class="text-right"><p>6</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Yoeruyo-PH2-0mm-Connector-Pre-Crimped-3Pin-100CM/dp/B0C2HHHNX9/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?_u=m2pu4108e868&amp;amp;id=596387029707&amp;amp;skuId=4317745623497">PH2.0镀金单头端子线，电子线15cm，红/黄/黑</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>PH2.0 Pre-Crimped Wire, 25cm (R/Y/B)</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Yoeruyo-PH2-0mm-Connector-Pre-Crimped-3Pin-100CM/dp/B0C2HBL668/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?_u=m2pu4108e868&amp;amp;id=596387029707&amp;amp;skuId=4317745623533">PH2.0镀金单头端子线，电子线25cm，红/黄/黑</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>PH2.0 Pre-Crimped Wire, 30cm (R/Y/B)</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Yoeruyo-PH2-0mm-Connector-Pre-Crimped-3Pin-100CM/dp/B0C2HBL668/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?_u=m2pu4108e868&amp;amp;id=596387029707&amp;amp;skuId=4317745623533">PH2.0镀金单头端子线，电子线30cm，红/黄/黑</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>PH2.0-3P Housing</p></td>
+<td class="text-right"><p>16</p></td>
+<td class="text-left"><p>As provided above</p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?id=15486830256&amp;amp;spm=a1z09.2.0.0.6b202e8dOSJ2GK&amp;amp;skuId=3283156525609">PH2.0-3P胶壳</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>SH1.0 Pre-Crimped Wire, 40cm (R/B)</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Cermant-SH1-0mm-Pin-Connector-Female/dp/B0DM238Y63/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?_u=m2pu41080c07&amp;amp;id=595880379976&amp;amp;skuId=4302450046792">SH1.0镀金单头端子线，特软硅胶线40cm，红/黑</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>SH1.0-2P Housing</p></td>
+<td class="text-right"><p>5</p></td>
+<td class="text-left"><p>As provided above</p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.taobao.com/item.htm?_u=m2pu41087701&amp;amp;id=595859715531&amp;amp;skuId=4132094928761">SH1.0-2P胶壳</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>USB-A to MicroUSB Cable, 3m</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/MaGeek-Premium-Samsung-Motorola-Google/dp/B00WEVG57K/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/100039185783.html">JD</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>USB-A to Type-C Cable, 3m</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Belkin-BoostCharge-Samsung-Nintendo-Carplay/dp/B08558DD7G/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/100008391172.html">JD</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Programming Tools</strong></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>ST-Link V2 Downloader</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/AITRIP-Emulator-Downloader-Programmer-STM32F103C8T6/dp/B0D22S8WVX/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=558866168716&amp;amp;skuId=5146051183964">ST-Link V2下载器</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>2.54-4p Pin Header</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Jabinco-Breakable-Header-Connector-Arduino/dp/B0817JG3XN/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=546772885976&amp;amp;skuId=3398671888945">2.54-4p单排针</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Dupont Cable F/F</p></td>
+<td class="text-right"><p>4</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/California-JOS-Breadboard-Optional-Multicolored/dp/B0BRTJXND9/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?abbucket=9&amp;amp;id=41254478179&amp;amp;skuId=5755030488371">杜邦线母对母</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Power Supply</strong></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>MEAN Well RSP-320-5V Power Supply</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Mean-RSP-320-5-Power-Supply-Signs/dp/B00IWC2RLS/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://detail.tmall.com/item.htm?_u=i2pu41088bc7&amp;amp;id=547752759011&amp;amp;skuId=4572439414905">明纬RSP-320-5V</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Emergency Stop Button</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Emergency-Button-Momentary-PushButton-Switches/dp/B0CWV7L81B/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/100114884831.html">施耐德XALJ01C急停开关</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Power Cord (Type I, 2m)</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/StarTech-com-NEMA-Power-Cord-Volts/dp/B002VY53QE/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/100132121492.html">品字电源线</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Accessories</strong></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>UV Resin Glue</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/dp/B0BJ65T85R/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/100045475837.html">Ergo 8500</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Super Glue</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Scotch-Super-Liquid-Ounces-AD114/dp/B001PILFVY/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/100198857334.html">Ergo 5910</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Zip Tie 2.5mmx15cm</p></td>
+<td class="text-right"><p>50</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/KOOWIN-Small-Nylon-Plastic-Cable/dp/B08HMPBY3L/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/100023555528.html">2.5x200mm扎带</a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Cable Ties Reusable 9mmx15cm</p></td>
+<td class="text-right"><p>6</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/CableCreation-Fastening-Organizer-Adjustable-Management/dp/B07CWLHRQP/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/100002860615.html">魔术贴9mm*15cm</a></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Hook and Loop Reusable Fastening Cable Tie 20mmx20cm</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-left"><p><a class="reference external" href="https://www.amazon.com/Inches-Reusable-Fastening-Straps-Wisdompro/dp/B01M1L1YHO/">Amazon</a></p></td>
+<td class="text-left"><p><a class="reference external" href="https://item.jd.com/100120892220.html">带扣魔术贴20mm*25cm</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
 </section>
 
         </article>
@@ -308,8 +647,28 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Getting Started</a><ul>
+<li><a class="reference internal" href="#before-you-start">Before You Start</a></li>
+<li><a class="reference internal" href="#hardware-bill-of-materials">Hardware Bill of Materials</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
