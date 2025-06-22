@@ -179,7 +179,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -238,7 +238,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/quick_start/01_pcba.md.txt" title="View this page">
+  <a class="muted-link" href="../_sources/quick_start/01_pcba.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -252,15 +252,53 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
           <section id="pcb-assembly">
-<h1>PCB Assembly<a class="headerlink" href="#pcb-assembly" title="Link to this heading">¶</a></h1>
-<p>🚀 Content coming soon. Thanks for your patience!</p>
+<span id="tutorials-en"></span><h1>PCB Assembly<a class="headerlink" href="#pcb-assembly" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="#tutorials_en">Step-by-step Tutorial (English)</a></p></li>
+</ul>
+<section id="step-by-step-guide-to-ordering-pcba">
+<h2>Step-by-Step Guide to Ordering PCBA<a class="headerlink" href="#step-by-step-guide-to-ordering-pcba" title="Link to this heading">¶</a></h2>
+<p>This tutorial walks you through how to order the DOGlove main board through <a class="reference external" href="https://cart.jlcpcb.com/quote">JLCPCB</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You’re free to choose any PCBA manufacturer you prefer. In general, you’ll need to submit a <strong>Gerber file</strong> (for PCB fabrication) and <strong>Pick &amp; Place + BOM files</strong> (for SMT assembly).</p>
+</div>
+<section id="file-preparation">
+<h3>1. File Preparation<a class="headerlink" href="#file-preparation" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../_downloads/2a4c86a1a20c1a922168d792ec90930c/Gerber_DOGlove_MainBoard.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Gerber</span> <span class="pre">file</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/b793bc00ae8d55f30b86837221982751/PickAndPlace_DOGlove_MainBoard.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Pick</span> <span class="pre">&amp;</span> <span class="pre">Place</span> <span class="pre">file</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../_downloads/684c352cc062a723631a169c474faeb7/BOM_DOGlove_MainBoard_DOGlove_MainBoard.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">BOM</span> <span class="pre">file</span></code></a></p></li>
+</ul>
+</section>
+<section id="order-the-pcb">
+<h3>2. Order the PCB<a class="headerlink" href="#order-the-pcb" title="Link to this heading">¶</a></h3>
+<p><strong>Step 1:</strong> Upload the Gerber file you just downloaded.</p>
+<img alt="../_images/1_add_gerber.jpg" src="../_images/1_add_gerber.jpg" />
+<p><strong>Step 2:</strong> Follow the image tutorial below to select the appropriate manufacturing parameters.</p>
+<img alt="../_images/2_pcba.jpg" src="../_images/2_pcba.jpg" />
+<p><strong>Step 3:</strong> On the next page, open the <code class="docutils literal notranslate"><span class="pre">Bill</span> <span class="pre">of</span> <span class="pre">Materials</span></code> section and upload both the <strong>BOM</strong> and <strong>Pick &amp; Place</strong> files.</p>
+<img alt="../_images/3_add_bom_pp.jpg" src="../_images/3_add_bom_pp.jpg" />
+<p><strong>Step 4:</strong> Once processed, a parts confirmation list will be shown. If all parts are in stock, click <strong>NEXT</strong> to proceed.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If some parts are unavailable, manually select substitutes using the suggestions provided.</p>
+<p>Need help? Open a GitHub issue or contact Han directly.</p>
+</div>
+<img alt="../_images/4_check_bom.jpg" src="../_images/4_check_bom.jpg" />
+<p><strong>Step 5:</strong> You might see a warning like <em>“Project has unselected parts.”</em> This is normal, as some NC (Not Connected) parts are not meant to be assembled. Just click <strong>Do not place</strong> to continue.</p>
+<img alt="../_images/5_nc.jpg" src="../_images/5_nc.jpg" />
+<p><strong>Final Step:</strong> 🎉 You’re almost there! You can now preview a 3D model of your assembled board. If everything looks good and matches the preview images, click <strong>NEXT</strong> to place your order!</p>
+<img alt="../_images/6_place_order.jpg" src="../_images/6_place_order.jpg" />
+</section>
+</section>
 </section>
 
         </article>
@@ -306,8 +344,31 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">PCB Assembly</a><ul>
+<li><a class="reference internal" href="#step-by-step-guide-to-ordering-pcba">Step-by-Step Guide to Ordering PCBA</a><ul>
+<li><a class="reference internal" href="#file-preparation">1. File Preparation</a></li>
+<li><a class="reference internal" href="#order-the-pcb">2. Order the PCB</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
