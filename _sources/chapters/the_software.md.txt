@@ -1,3 +1,25 @@
 # Software
 
-🚀 Content coming soon. Thanks for your patience!
+## communication between pc and board
+uart package
+vibration package
+udp
+
+## servo datapath
+udp
+
+## haptic+force feedback
+readings from the force sensor
+threshold to enable force feedback (servo.torque enable)
+    - to adjust the stiffness of force feedback, simply adjust the Kp
+threshold to enable vibration (glove_mcu -> send vibration command)
+    - to adjust the vibration pattern (command -> ti library), duration
+
+## pink fk and ik
+add site name at xml files
+
+## the scale factor
+The goal is to maintain consistency: when thumb and index touched in the real world, the thumb and index of the dexterous hand should also be touched together.
+
+finger length discrepancy -> scale
+finger distance discrepancy -> shift

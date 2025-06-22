@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Glove Assembly" href="04_assemble_glove.html" /><link rel="prev" title="3D Print" href="02_3d_print.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Glove Assembly" href="04_assemble_glove.html" /><link rel="prev" title="3D Printing Guide" href="02_3d_print.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
         <title>Flash the Firmware - DOGlove</title>
@@ -205,7 +205,7 @@
   <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../chapters/getting_started.html">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Getting Started</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01_pcba.html">PCB Assembly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_3d_print.html">3D Print</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_3d_print.html">3D Printing Guide</a></li>
 <li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Flash the Firmware</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04_assemble_glove.html">Glove Assembly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="05_make_it_move.html">Make it Move</a></li>
@@ -260,7 +260,12 @@
         <article role="main" id="furo-main-content">
           <section id="flash-the-firmware">
 <h1>Flash the Firmware<a class="headerlink" href="#flash-the-firmware" title="Link to this heading">¶</a></h1>
-<p>🚀 Content coming soon. Thanks for your patience!</p>
+<p>First you need to download the latest firmware here[GitHub release].</p>
+<p>Then you need tool to flash the firmware into the STM32 MCU(Micro controllers).</p>
+<p>For Windows, you may use [STM32Programmar], for MacOS and Ubuntu, we suggest [openocd].</p>
+<p>pip install openocd
+openocd flash xxxxxx</p>
+<p>If everything goes well, you might see ‘flash verify ok’ notice.</p>
 </section>
 
         </article>
@@ -284,7 +289,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">3D Print</div>
+                <div class="title">3D Printing Guide</div>
                 
               </div>
             </a>

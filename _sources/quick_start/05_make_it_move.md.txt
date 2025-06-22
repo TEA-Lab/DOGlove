@@ -1,2 +1,7 @@
 # Make it Move
-🚀 Content coming soon. Thanks for your patience!
+1. Wire connection
+- encoder datapath
+- servo datapath
+- power tree
+2. Status LED check
+3. test script

@@ -1,2 +1,11 @@
 # Flash the Firmware
-🚀 Content coming soon. Thanks for your patience!
+First you need to download the latest firmware here[GitHub release].
+
+Then you need tool to flash the firmware into the STM32 MCU(Micro controllers).
+
+For Windows, you may use [STM32Programmar], for MacOS and Ubuntu, we suggest [openocd].
+
+pip install openocd
+openocd flash xxxxxx
+
+If everything goes well, you might see 'flash verify ok' notice.

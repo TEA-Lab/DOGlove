@@ -7,3 +7,7 @@ You can view the 3D model of DOGlove on Onshape. The model can be exported to So
 ![Onshape Model Preview](../_static/hardware/onshape_model.jpg)
 
 
+## Linkage length
+current design length (table)
+solidwords screenshots (hole to hole distance)
+improper length lead to failure
