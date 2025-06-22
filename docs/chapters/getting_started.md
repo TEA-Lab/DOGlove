@@ -4,7 +4,7 @@
 :hidden:
 :maxdepth: 1
 
-../quick_start/01_pcba.md
+../quick_start/01_pcba.rst
 ../quick_start/02_3d_print.md
 ../quick_start/03_flash_firmware.md
 ../quick_start/04_assemble_glove.md
@@ -14,7 +14,7 @@
 ## Before You Start
 
 1. Check our [hardware bill of materials (BOM)](#hardware-bill-of-materials) to make sure you have everything.
-2. [Order the PCBA](../quick_start/01_pcba).
+2. [Order the PCBA](../quick_start/01_pcba.rst).
 3. [Print the mechanical structures](../quick_start/02_3d_print).
 4. The whole system has been tested under **Ubuntu 20.04**.
 
@@ -38,12 +38,12 @@
 | M2x12mm Button Head Screw                |       10 |[92095A455](https://www.mcmaster.com/92095A455/)|[M2x12十字圆头](https://detail.tmall.com/item.htm?abbucket=9&id=637524754721&skuId=4742801506984)|
 | M2x20+3mm Single Through Copper Standoff |        1 |[Amazon](https://www.amazon.com/ZZHXSM-320PCS-Hexagonal-Motherboard-Computer/dp/B0DHKTWMPH/)|[M2x20+3单通滚花铜柱](https://detail.tmall.com/item.htm?abbucket=9&id=534855987272&skuId=5775647192461)|
 | M2x20mm Dual Through Copper Standoff     |        1 |[As provided above](https://www.amazon.com/ZZHXSM-320PCS-Hexagonal-Motherboard-Computer/dp/B0DHKTWMPH/)|[M2x20双通滚花铜柱](https://detail.tmall.com/item.htm?abbucket=9&id=534855987272&skuId=5942557358119)|
-| M2x5mm Self-Tapping Screw                |       20 |[90380A325](https://www.mcmaster.com/90380A325/)|[M2x5十字圆头割尾](https://detail.tmall.com/item.htm?abbucket=9&id=535345606154&skuId=4327300926628)|
+| M2x5mm Self-Tapping Screw                |       20 |[90380A325](https://www.mcmaster.com/90380A325/)|[M2x5十字圆头割尾自攻](https://detail.tmall.com/item.htm?abbucket=9&id=535345606154&skuId=4327300926628)|
 | M2x6mm Self-Tapping Screw                |       16 |(From servo box)|(From servo box)|
 | M2x8mm Self-Tapping Screw                |       20 |(From servo box)|(From servo box)|
 | M2x5x0.3mm Washer                        |       12 |[Amazon](https://www.amazon.com/Washers-Stainless-Assortment-Sizes%EF%BC%88M2-Industrial/dp/B0CBJZNDN4/)|[M2x5x0.3平垫片](https://detail.tmall.com/item.htm?abbucket=9&id=736651447364&skuId=5800439948793)|
 | M2 Lock Nut                              |       10 |[Amazon](https://www.amazon.com/M2-0-3-Insert-Locknuts-Stainless-Clinching/dp/B0DR93VFYG/)|[M2防松螺母](https://detail.tmall.com/item.htm?abbucket=9&id=763443678130&skuId=5254837848373)|
-| M2 Hex Nut                               |       10 |[90592A075](https://www.mcmaster.com/90592A075/)|[M2螺母](https://detail.tmall.com/item.htm?abbucket=9&id=549640610734&skuId=3507734575864)|
+| M2 Hex Nut                               |       10 |[90592A075](https://www.mcmaster.com/90592A075/)|[M2六角螺母](https://detail.tmall.com/item.htm?abbucket=9&id=549640610734&skuId=3507734575864)|
 | M3x10mm Button Head Screw                |        2 |[92095A182](https://www.mcmaster.com/92095A182/)|[M3x10十字圆头](https://detail.tmall.com/item.htm?abbucket=9&id=637524754721&skuId=4742801506977)|
 | M3x30mm Button Head Screw                |        2 |[92095A187](https://www.mcmaster.com/92095A187/)|[M3x30十字圆头](https://detail.tmall.com/item.htm?abbucket=9&id=637524754721&skuId=4742801506999)|
 | M3x15mm D-Shape Shaft Screw              |       16 | —             |[Purchase directly from factory](https://item.taobao.com/item.htm?ft=t&id=935960628369)|
@@ -53,7 +53,7 @@
 | M4x15mm Dual Through Copper Standoff     |        4 |[Amazon](https://www.amazon.com/Standoff-Motherboard-Hexagon-Spacer-Assortment/dp/B09X358Q73/)|[M4x15双通铜柱](https://detail.tmall.com/item.htm?abbucket=9&id=542213588710&skuId=4348642093877)|
 | M4x20mm Dual Through Copper Standoff     |        1 |[As provided above](https://www.amazon.com/Standoff-Motherboard-Hexagon-Spacer-Assortment/dp/B09X358Q73/)|[M4x20双通铜柱](https://detail.tmall.com/item.htm?abbucket=9&id=542213588710&skuId=4348642093875)|
 | M4 Thin-Profile Hex Nut                  |        4 |[90710A035](https://www.mcmaster.com/90710A035/)|[M4扁薄六角螺母](https://detail.tmall.com/item.htm?_u=m2pu410880c4&id=533915610076&skuId=4937683182274)|
-| 7x4x2.5mm Bearing                        |       16 |[Amazon](https://www.amazon.com/uxcell-Bearings-4x7x2-5mm-Miniature-Precision/dp/B0CM6RYCC7/)|[MR74-ZZ P5【4*7*2.5】轴承](https://detail.tmall.com/item.htm?_u=m2pu41088525&id=743100333785&skuId=5123565292062)|
+| 7x4x2.5mm Bearing                        |       16 |[Amazon](https://www.amazon.com/uxcell-Bearings-4x7x2-5mm-Miniature-Precision/dp/B0CM6RYCC7/)|[MR74-ZZ P5【4x7x2.5】轴承](https://detail.tmall.com/item.htm?_u=m2pu41088525&id=743100333785&skuId=5123565292062)|
 | 0.6mm 7x7 Stainless Steel Wire Rope      | 25ft / 10m |[3461T07](https://www.mcmaster.com/3461T07/)|[钢丝绳](https://item.taobao.com/item.htm?_u=m2pu4108c68a&id=574480300292&skuId=3929526017813)|
 | M3x25mm Headless Clevis Pin              |        5 |[93890A703](https://www.mcmaster.com/93890A703/)|[M3x25双头卡簧销轴](https://detail.tmall.com/item.htm?_u=m2pu41084dab&id=755183277159&skuId=5205582448931)|
 | M2 Circlip                               |       10 |[Amazon](https://www.amazon.com/Circlip-External-Retaining-Stainless-Assortment/dp/B0BNB39FKY/)|[M2-e型卡簧挡圈](https://detail.tmall.com/item.htm?_u=m2pu41083fee&id=557748539457&skuId=5002991824253)|
@@ -83,6 +83,6 @@
 | **Accessories**                          |          |               |                       |
 | UV Resin Glue                            |        1 |[Amazon](https://www.amazon.com/dp/B0BJ65T85R/)|[Ergo 8500](https://item.jd.com/100045475837.html)|
 | Super Glue                               |        1 |[Amazon](https://www.amazon.com/Scotch-Super-Liquid-Ounces-AD114/dp/B001PILFVY/)|[Ergo 5910](https://item.jd.com/100198857334.html)|
-| Zip Tie 2.5mmx15cm                       |       50 |[Amazon](https://www.amazon.com/KOOWIN-Small-Nylon-Plastic-Cable/dp/B08HMPBY3L/)|[2.5x200mm扎带](https://item.jd.com/100023555528.html)|
+| Zip Tie 2.5mmx15cm                       |       50 |[Amazon](https://www.amazon.com/KOOWIN-Small-Nylon-Plastic-Cable/dp/B08HMPBY3L/)|[扎带2.5x200mm](https://item.jd.com/100023555528.html)|
 | Cable Ties Reusable 9mmx15cm             |        6 |[Amazon](https://www.amazon.com/CableCreation-Fastening-Organizer-Adjustable-Management/dp/B07CWLHRQP/)|[魔术贴9mm*15cm](https://item.jd.com/100002860615.html)|
 | Hook and Loop Reusable Fastening Cable Tie 20mmx20cm |        1 |[Amazon](https://www.amazon.com/Inches-Reusable-Fastening-Straps-Wisdompro/dp/B01M1L1YHO/)|[带扣魔术贴20mm*25cm](https://item.jd.com/100120892220.html)|
