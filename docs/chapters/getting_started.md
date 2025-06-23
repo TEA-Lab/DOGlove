@@ -5,7 +5,7 @@
 :maxdepth: 1
 
 ../quick_start/01_pcba.rst
-../quick_start/02_3d_print.md
+../quick_start/02_3d_print.rst
 ../quick_start/03_flash_firmware.md
 ../quick_start/04_assemble_glove.md
 ../quick_start/05_make_it_move.md
@@ -15,7 +15,7 @@
 
 1. Check our [hardware bill of materials (BOM)](#hardware-bill-of-materials) to make sure you have everything.
 2. [Order the PCBA](../quick_start/01_pcba.rst).
-3. [Print the mechanical structures](../quick_start/02_3d_print).
+3. [Print the mechanical structures](../quick_start/02_3d_print.rst).
 4. The whole system has been tested under **Ubuntu 20.04**.
 
 (hardware-bill-of-materials)=
@@ -24,10 +24,10 @@
 | Component                                | Quantity | Purchase Link | Purchase Link (China) |
 | :--------------------------------------- | -------: | :------------ | :-------------------- |
 | **3D Print Filament**                    |          |               |                       |
-| Bambu PETG Basic (Gold)                  |        1 |[Bambu Store](https://us.store.bambulab.com/products/petg-hf?id=42735939649672)|[JD](https://item.jd.com/10076951987144.html)|
-| Bambu PETG HF (White)                    |        1 |[Bambu Store](https://us.store.bambulab.com/products/petg-hf?id=42735939846280)|[JD](https://item.jd.com/10098873650763.html)|
-| Bambu Support for PLA/PETG               |        1 |[Bambu Store](https://us.store.bambulab.com/products/support-for-pla-petg)|[JD](https://item.jd.com/10100641558676.html)|
-| Bambu TPU for AMS (White)                |        1 |[Bambu Store](https://us.store.bambulab.com/products/tpu-for-ams?id=43059884720264)|[JD](https://item.jd.com/10120952202960.html)|
+| Bambu PETG Basic (Gold)                  |        1 |[Bambu Store](https://us.store.bambulab.com/products/petg-hf?id=42735939649672)|[Taobao](https://detail.tmall.com/item.htm?id=816799102364)|
+| Bambu PETG HF (White)                    |        1 |[Bambu Store](https://us.store.bambulab.com/products/petg-hf?id=42735939846280)|[Taobao](https://detail.tmall.com/item.htm?id=816799102364)|
+| Bambu Support for PLA/PETG               |        1 |[Bambu Store](https://us.store.bambulab.com/products/support-for-pla-petg)|[Taobao](https://detail.tmall.com/item.htm?abbucket=9&id=813808728827)|
+| Bambu TPU for AMS (White)                |        1 |[Bambu Store](https://us.store.bambulab.com/products/tpu-for-ams?id=43059884720264)|[Taobao](https://detail.tmall.com/item.htm?abbucket=9&id=847975695749&skuId=5633828620351)|
 | **Dynamixel Parts**                      |          |               |                       |
 | Dynamixel XC330-M288-T                   |        2 |[Dynamixel Store](https://www.robotis.us/dynamixel-xc330-m288-t/)|[Taobao](https://item.taobao.com/item.htm?_u=m2pu41081584&id=660146504579&skuId=4941606395637)|
 | Dynamixel XL330-M288-T                   |        3 |[Dynamixel Store](https://www.robotis.us/dynamixel-xl330-m288-t/)|[Taobao](https://item.taobao.com/item.htm?_u=m2pu410853f0&id=648175925849)|
