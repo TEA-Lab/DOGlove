@@ -1,0 +1,1265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="DOGlove_Ver20241223">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0240239529110336 -0.016382201418219 -0.0238366502311693"
+        rpy="0 0 0" />
+      <mass
+        value="0.185697083197622" />
+      <inertia
+        ixx="0.000147340830920686"
+        ixy="-2.24445846927294E-07"
+        ixz="-5.2704899196788E-07"
+        iyy="0.000107182443761882"
+        iyz="-2.99883048741618E-05"
+        izz="0.000106923484742146" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="index_split">
+    <inertial>
+      <origin
+        xyz="2.01866500437742E-06 0.0196178970011489 -0.0272426373843988"
+        rpy="0 0 0" />
+      <mass
+        value="0.0331994485719628" />
+      <inertia
+        ixx="3.66314950683702E-06"
+        ixy="1.37497173358814E-09"
+        ixz="-8.30682827652466E-11"
+        iyy="2.76514617489481E-06"
+        iyz="-1.19254141305384E-07"
+        izz="3.44002932256614E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/index_split.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/index_split.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="index_split"
+    type="revolute">
+    <origin
+      xyz="-0.0849999999999999 -0.0601040764008531 -0.104852813742388"
+      rpy="-1.5707963267949 -0.785398163397448 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="index_split" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.436"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="index_bend_3">
+    <inertial>
+      <origin
+        xyz="-1.16573417585641E-15 0.0302786278809853 -3.00020989626656E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.00454937532002053" />
+      <inertia
+        ixx="2.55133420659709E-06"
+        ixy="1.80110727019002E-21"
+        ixz="-4.85579070958808E-24"
+        iyy="9.4581033217748E-08"
+        iyz="5.42160219454352E-10"
+        izz="2.4688848408994E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/index_bend_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/index_bend_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="index_bend_3"
+    type="revolute">
+    <origin
+      xyz="0 0.045 -0.0365"
+      rpy="0 0 0" />
+    <parent
+      link="index_split" />
+    <child
+      link="index_bend_3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.16"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="index_bend_2">
+    <inertial>
+      <origin
+        xyz="-0.000180674798107489 0.0299999999999998 -0.000190738564997725"
+        rpy="0 0 0" />
+      <mass
+        value="0.013291543115275" />
+      <inertia
+        ixx="6.41792024574131E-06"
+        ixy="3.52431846829924E-21"
+        ixz="1.26137011841242E-08"
+        iyy="7.34581376289825E-07"
+        iyz="-1.48475733156398E-20"
+        izz="6.29491184431296E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/index_bend_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/index_bend_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="index_bend_2"
+    type="revolute">
+    <origin
+      xyz="0 0.07 0"
+      rpy="0 0 0" />
+    <parent
+      link="index_bend_3" />
+    <child
+      link="index_bend_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.61"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="index_bend_1">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-16 0.00880991685622767 -1.91166527052644E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.00133489669454765" />
+      <inertia
+        ixx="8.22111891434235E-08"
+        ixy="1.37432266737001E-22"
+        ixz="4.54383881407306E-24"
+        iyy="2.94528910697938E-08"
+        iyz="2.94556258264916E-23"
+        izz="7.27870591399113E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/index_bend_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/index_bend_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="index_bend_1"
+    type="revolute">
+    <origin
+      xyz="0 0.06 0"
+      rpy="0 0 0" />
+    <parent
+      link="index_bend_2" />
+    <child
+      link="index_bend_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.09"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="middle_split">
+    <inertial>
+      <origin
+        xyz="2.0201686107002E-06 0.0196179022547952 -0.027242637384398"
+        rpy="0 0 0" />
+      <mass
+        value="0.0331994485719631" />
+      <inertia
+        ixx="3.66314957605039E-06"
+        ixy="1.37495589971464E-09"
+        ixz="-8.30705364884407E-11"
+        iyy="2.76514610568145E-06"
+        iyz="-1.19254295086775E-07"
+        izz="3.44002932256614E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/middle_split.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/middle_split.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_split"
+    type="revolute">
+    <origin
+      xyz="-0.0849999999999999 -0.0417193000900034 -0.0864680374315374"
+      rpy="-1.5707963267949 -0.785398163397448 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="middle_split" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.087"
+      upper="0.2615"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="middle_bend_3">
+    <inertial>
+      <origin
+        xyz="6.19643225618915E-14 0.0339728289866728 -2.7666748464647E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.00493337532002052" />
+      <inertia
+        ixx="3.35947498328153E-06"
+        ixy="2.81188967626667E-22"
+        ixz="-1.28515873339815E-24"
+        iyy="9.97010364051885E-08"
+        iyz="6.00930416831938E-10"
+        izz="3.2729296143964E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/middle_bend_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/middle_bend_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_bend_3"
+    type="revolute">
+    <origin
+      xyz="0 0.045 -0.0365"
+      rpy="0 0 0" />
+    <parent
+      link="middle_split" />
+    <child
+      link="middle_bend_3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.15"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="middle_bend_2">
+    <inertial>
+      <origin
+        xyz="-0.000171024427178729 0.0325000000110407 -0.000394202382995382"
+        rpy="0 0 0" />
+      <mass
+        value="0.014041543115275" />
+      <inertia
+        ixx="7.76404219520716E-06"
+        ixy="-9.01240653975475E-22"
+        ixz="1.31023087504715E-08"
+        iyy="7.65218620475344E-07"
+        iyz="-7.92340462095867E-23"
+        izz="7.63856789929909E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/middle_bend_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/middle_bend_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_bend_2"
+    type="revolute">
+    <origin
+      xyz="0 0.078 0"
+      rpy="0 0 0" />
+    <parent
+      link="middle_bend_3" />
+    <child
+      link="middle_bend_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.44"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="middle_bend_1">
+    <inertial>
+      <origin
+        xyz="6.32410790402105E-14 0.0088099168675338 7.75712480360902E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.00133489669454766" />
+      <inertia
+        ixx="8.22111891434235E-08"
+        ixy="-5.27458181133971E-23"
+        ixz="-4.6558356966251E-24"
+        iyy="2.94528910697939E-08"
+        iyz="-3.43188325210113E-23"
+        izz="7.27870591399114E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/middle_bend_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/middle_bend_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="middle_bend_1"
+    type="revolute">
+    <origin
+      xyz="0 0.065 0"
+      rpy="0 0 0" />
+    <parent
+      link="middle_bend_2" />
+    <child
+      link="middle_bend_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.09"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ring_split">
+    <inertial>
+      <origin
+        xyz="2.01959282369879E-06 0.0196179008908676 -0.0272426373843986"
+        rpy="0 0 0" />
+      <mass
+        value="0.0331994485719624" />
+      <inertia
+        ixx="3.66314955751379E-06"
+        ixy="1.37495843281239E-09"
+        ixz="-8.30645747180209E-11"
+        iyy="2.76514612421802E-06"
+        iyz="-1.1925423409534E-07"
+        izz="3.44002932256613E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/ring_split.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/ring_split.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ring_split"
+    type="revolute">
+    <origin
+      xyz="-0.085 -0.0233345237791538 -0.0680832611206866"
+      rpy="-1.5707963267949 -0.785398163397448 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="ring_split" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.1045"
+      upper="0.052"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ring_bend_3">
+    <inertial>
+      <origin
+        xyz="0 0.0316580893023667 -2.90815882332887E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.00469337532002052" />
+      <inertia
+        ixx="2.83677164830641E-06"
+        ixy="-6.76683213174681E-24"
+        ixz="-1.82502099050573E-22"
+        iyy="9.65010344741603E-08"
+        iyz="5.64279081530881E-10"
+        izz="2.75278628135231E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/ring_bend_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/ring_bend_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ring_bend_3"
+    type="revolute">
+    <origin
+      xyz="0 0.045 -0.0365"
+      rpy="0 0 0" />
+    <parent
+      link="ring_split" />
+    <child
+      link="ring_bend_3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.15"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ring_bend_2">
+    <inertial>
+      <origin
+        xyz="-0.000180674798105157 0.03 -0.000190738564995879"
+        rpy="0 0 0" />
+      <mass
+        value="0.013291543115275" />
+      <inertia
+        ixx="6.4179202457413E-06"
+        ixy="-2.16977151281935E-21"
+        ixz="1.26137011841237E-08"
+        iyy="7.34581376289824E-07"
+        iyz="-2.29853298641343E-22"
+        izz="6.29491184431295E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/ring_bend_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/ring_bend_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ring_bend_2"
+    type="revolute">
+    <origin
+      xyz="0 0.073 0"
+      rpy="0 0 0" />
+    <parent
+      link="ring_bend_3" />
+    <child
+      link="ring_bend_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.61"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ring_bend_1">
+    <inertial>
+      <origin
+        xyz="-4.16333634234434E-16 0.00880991685622662 -7.35522753814166E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00133489669454765" />
+      <inertia
+        ixx="8.22111891434228E-08"
+        ixy="2.29887684869804E-23"
+        ixz="1.40378144709786E-16"
+        iyy="2.94528910697939E-08"
+        iyz="4.50356252151534E-23"
+        izz="7.27870591399107E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/ring_bend_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/ring_bend_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ring_bend_1"
+    type="revolute">
+    <origin
+      xyz="0 0.06 0"
+      rpy="0 0 0" />
+    <parent
+      link="ring_bend_2" />
+    <child
+      link="ring_bend_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.09"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="pinky_split">
+    <inertial>
+      <origin
+        xyz="2.02065542823787E-06 0.0196179032776091 -0.027242633824687"
+        rpy="0 0 0" />
+      <mass
+        value="0.0331994485719634" />
+      <inertia
+        ixx="3.66314958861178E-06"
+        ixy="1.37494805011746E-09"
+        ixz="-8.30762740817502E-11"
+        iyy="2.76514609382053E-06"
+        iyz="-1.19253970681125E-07"
+        izz="3.44002932186568E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/pinky_split.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/pinky_split.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pinky_split"
+    type="revolute">
+    <origin
+      xyz="-0.085 -0.0049497 -0.049698"
+      rpy="-1.5708 -0.7854 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="pinky_split" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.227"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="pinky_bend_3">
+    <inertial>
+      <origin
+        xyz="-5.64825963778048E-15 0.0279974271067274 -3.16729908511268E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.00430937532002052" />
+      <inertia
+        ixx="2.12045893255717E-06"
+        ixy="-1.43708731397769E-22"
+        ixz="1.01839564911708E-23"
+        iyy="9.13810309371329E-08"
+        iyz="5.05051109012633E-10"
+        izz="2.04056956914009E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/pinky_bend_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/pinky_bend_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pinky_bend_3"
+    type="revolute">
+    <origin
+      xyz="0 0.045 -0.0365"
+      rpy="0 0 0" />
+    <parent
+      link="pinky_split" />
+    <child
+      link="pinky_bend_3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="pinky_bend_2">
+    <inertial>
+      <origin
+        xyz="-0.000191479377526345 0.0275000000000266 3.70600440735037E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.012541543115275" />
+      <inertia
+        ixx="5.23671049169671E-06"
+        ixy="1.35899384881527E-21"
+        ixz="1.20666549278338E-08"
+        iyy="7.02709266814131E-07"
+        iyz="-1.2262495320023E-21"
+        izz="5.11739730649724E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/pinky_bend_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/pinky_bend_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pinky_bend_2"
+    type="revolute">
+    <origin
+      xyz="0 0.065 0"
+      rpy="0 0 0" />
+    <parent
+      link="pinky_bend_3" />
+    <child
+      link="pinky_bend_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.44"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="pinky_bend_1">
+    <inertial>
+      <origin
+        xyz="-9.08995101411847E-16 0.00880991685622626 -2.65412691824451E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.00133489669454765" />
+      <inertia
+        ixx="8.22111891434224E-08"
+        ixy="-8.75164914770004E-24"
+        ixz="1.77780087201178E-23"
+        iyy="2.94528910697938E-08"
+        iyz="-1.32005806176692E-23"
+        izz="7.27870591399103E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/pinky_bend_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/pinky_bend_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pinky_bend_1"
+    type="revolute">
+    <origin
+      xyz="0 0.055 0"
+      rpy="0 0 0" />
+    <parent
+      link="pinky_bend_2" />
+    <child
+      link="pinky_bend_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.09"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="thumb_mcp">
+    <inertial>
+      <origin
+        xyz="-0.0166423926604196 4.56217008615312E-12 2.09714190457788E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.00237390284186762" />
+      <inertia
+        ixx="4.40151657421709E-08"
+        ixy="3.12674271545044E-22"
+        ixz="-1.61200140646868E-22"
+        iyy="3.63646287396663E-07"
+        iyz="2.34190486684522E-23"
+        izz="3.75289349007021E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/thumb_mcp.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/thumb_mcp.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_mcp"
+    type="revolute">
+    <origin
+      xyz="-0.0475 -0.092589 -0.07964"
+      rpy="-1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="thumb_mcp" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2"
+      upper="0.87"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="thumb_split">
+    <inertial>
+      <origin
+        xyz="7.69024561023124E-06 0.0124341534139221 0.00469169349333174"
+        rpy="0 0 0" />
+      <mass
+        value="0.0433016003527795" />
+      <inertia
+        ixx="7.83008382801777E-06"
+        ixy="2.48944120511655E-09"
+        ixz="9.87052239099518E-10"
+        iyy="5.01445255091582E-06"
+        iyz="2.41270188370947E-07"
+        izz="7.10630433373263E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/thumb_split.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/thumb_split.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_split"
+    type="revolute">
+    <origin
+      xyz="-0.031 0 0.0075"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_mcp" />
+    <child
+      link="thumb_split" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.52"
+      upper="0.87"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="thumb_bend_3">
+    <inertial>
+      <origin
+        xyz="1.74860126378462E-15 0.0213293822872752 3.80263406052697E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.00358937532002052" />
+      <inertia
+        ixx="1.13589849543929E-06"
+        ixy="-6.18731098189665E-22"
+        ixz="1.04948540217665E-23"
+        iyy="8.17810222653955E-08"
+        iyz="-3.91327579126992E-10"
+        izz="1.06368914069395E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/thumb_bend_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/thumb_bend_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_bend_3"
+    type="revolute">
+    <origin
+      xyz="0 0.04 -0.0045"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_split" />
+    <child
+      link="thumb_bend_3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="1.54"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="thumb_bend_2">
+    <inertial>
+      <origin
+        xyz="0.0022391766401616 0.0200000000000011 0.000862214503560582"
+        rpy="0 0 0" />
+      <mass
+        value="0.01004047413339" />
+      <inertia
+        ixx="2.57982610993166E-06"
+        ixy="6.67038445962762E-21"
+        ixz="-1.00850903345845E-08"
+        iyy="5.90238899375537E-07"
+        iyz="4.00686288720687E-21"
+        izz="2.47896361490138E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/thumb_bend_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/thumb_bend_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_bend_2"
+    type="revolute">
+    <origin
+      xyz="-0.002 0.05 0"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_bend_3" />
+    <child
+      link="thumb_bend_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.44"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="thumb_bend_1">
+    <inertial>
+      <origin
+        xyz="2.63677968348475E-15 0.00880991685622892 -7.97972798949331E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00133489669454765" />
+      <inertia
+        ixx="8.22111891434225E-08"
+        ixy="-1.81979734761666E-23"
+        ixz="1.34291612231887E-23"
+        iyy="2.94528910697938E-08"
+        iyz="4.85528297571195E-23"
+        izz="7.27870591399104E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/thumb_bend_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://DOGlove_Ver20241223/meshes/thumb_bend_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="thumb_bend_1"
+    type="revolute">
+    <origin
+      xyz="0.002 0.04 0"
+      rpy="0 0 0" />
+    <parent
+      link="thumb_bend_2" />
+    <child
+      link="thumb_bend_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.83"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

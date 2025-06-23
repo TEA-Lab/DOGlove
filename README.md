@@ -25,9 +25,58 @@
 * **2025/04/28** — Initial commit.
 * **2025/05/11** — Added embedded firmware repository.
 * **2025/06/01** — Added MakerWorld link, PCBA files, and Onshape model link.
+* **2025/06/22** — Update the tutorial. Add the Python scripts.
 
+## 🛠️ Environment Setup
+**Tested on:** Ubuntu 20.04 LTS
 
-🚀 Content coming soon. Thanks for your patience!
+### 1. Create Conda Environment
+```bash
+conda create -n DOGlove python=3.9.19
+```
+
+### 2. Install MuJoCo
+```bash
+conda install -c conda-forge mujoco
+```
+
+### 3. Install Required Python Packages
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Install Dynamixel Wizard
+Follow the [official installation guide](https://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_wizard2/#install-linux):
+
+1. Download the installer:
+   [Linux Download](http://www.robotis.com/service/download.php?no=1671)
+2. Grant permission:
+   ```bash
+   sudo chmod 775 DynamixelWizard2Setup_x64
+   ```
+3. Run the installer:
+   ```bash
+   ./DynamixelWizard2Setup_x64
+   ```
+4. Follow the prompts to complete installation.
+5. Add your user to the `dialout` group to access the USB port:
+   ```bash
+   sudo usermod -aG dialout <your_account_id>
+   # You can find your ID using:
+   whoami
+   ```
+6. Reboot to apply the changes:
+   ```bash
+   sudo reboot
+   ```
+
+## 🧪 Run Test Scripts
+```bash
+conda activate DOGlove
+python servo.py
+python glove_mcu.py
+python DOGlove_FK.py
+```
 
 ## 🏷️ License
 This repository is released under the MIT license. See [LICENSE](LICENSE) for more details.

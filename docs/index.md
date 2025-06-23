@@ -26,9 +26,8 @@ Ready to dive in? We've prepared a [detailed tutorial](chapters/getting_started)
 If you're new to DOGlove, the easiest way is to follow the step-by-step tutorial☝️.  
 For experienced developers, we also highlight the key steps below👇:
 
-- **Build the hardware**: Follow the [hardware](quick_start/04_assemble_glove) tutorial to assemble your DOGlove.
 - **Flash the embedded firmware**: Check out the [firmware](quick_start/03_flash_firmware) script.
-- **Bring it to life**: Quick link to set up the [software](quick_start/05_make_it_move).
+- **Bring it to life**: Quick link to [make it move](quick_start/05_make_it_move).
 
 
 ## Customizing

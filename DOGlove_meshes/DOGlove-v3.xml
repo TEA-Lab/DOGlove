@@ -1,0 +1,223 @@
+<mujoco model="DOGlove_Ver20241223">
+  <compiler angle="radian"/>
+
+  <!-- <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.1 0.1 0.1" specular="0 0 0"/>
+    <global azimuth="120" elevation="-20"/>
+  </visual>
+
+
+  <asset>
+    <texture name="grid" type="2d" builtin="checker" rgb1=".2 .3 .4" rgb2=".1 0.15 0.2" width="512" height="512"
+      mark="cross" markrgb=".8 .8 .8"/>
+    <material name="grid" texture="grid" texrepeat="1 1" texuniform="true"/>
+  </asset> -->
+
+  <visual>
+    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global azimuth="60" elevation="-40"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="1.0 1.0 1.0" rgb2="0 0 0" width="512" height="3072"/>
+    <!-- <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="1.0 1.0 1.0" rgb2="1.0 1.0 1.0"
+      markrgb="0.8 0.8 0.8" width="300" height="300"/>
+    <material name="groundplane" texture="groundplane" texuniform="false" texrepeat="5 5" reflectance="0.2"/> -->
+  </asset>
+
+  <default>
+    <default class="finger">
+      <joint damping="0.03"/>
+    </default>
+    <default class="thumb">
+      <joint damping="0.05"/>
+    </default>
+  </default>
+
+  <asset>
+    <mesh name="base_link" file="base_link.STL"/>
+    <mesh name="index_split" file="index_split.STL"/>
+    <mesh name="index_bend_3" file="index_bend_3.STL"/>
+    <mesh name="index_bend_2" file="index_bend_2.STL"/>
+    <mesh name="index_bend_1" file="index_bend_1.STL"/>
+    <mesh name="middle_split" file="middle_split.STL"/>
+    <mesh name="middle_bend_3" file="middle_bend_3.STL"/>
+    <mesh name="middle_bend_2" file="middle_bend_2.STL"/>
+    <mesh name="middle_bend_1" file="middle_bend_1.STL"/>
+    <mesh name="ring_split" file="ring_split.STL"/>
+    <mesh name="ring_bend_3" file="ring_bend_3.STL"/>
+    <mesh name="ring_bend_2" file="ring_bend_2.STL"/>
+    <mesh name="ring_bend_1" file="ring_bend_1.STL"/>
+    <mesh name="pinky_split" file="pinky_split.STL"/>
+    <mesh name="pinky_bend_3" file="pinky_bend_3.STL"/>
+    <mesh name="pinky_bend_2" file="pinky_bend_2.STL"/>
+    <mesh name="pinky_bend_1" file="pinky_bend_1.STL"/>
+    <mesh name="thumb_mcp" file="thumb_mcp.STL"/>
+    <mesh name="thumb_split" file="thumb_split.STL"/>
+    <mesh name="thumb_bend_3" file="thumb_bend_3.STL"/>
+    <mesh name="thumb_bend_2" file="thumb_bend_2.STL"/>
+    <mesh name="thumb_bend_1" file="thumb_bend_1.STL"/>
+  </asset>
+
+  <worldbody>
+    <body name="world_frame" pos="0 0 0"/>
+    <geom name="visible_point" type="sphere" size="0.00001" pos="-0.0 0.1 0.3" rgba="1 0 0 1" />
+    <!-- <geom name="board" type="box" size="0.005 0.055 0.032" pos="-0.035 0.07 0.327" rgba="0.752941 0.752941 0.752941 1" /> -->
+    <body name="hand" pos="0 0 0.3" euler="2.355 0 0">
+      <body name="palm" pos="0 0 0" gravcomp="1"> 
+        <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="base_link"/>
+      </body>
+      <body name="index_split" pos="-0.085 -0.0601041 -0.104853" quat="0.653281 -0.270598 -0.653281 0.270598" gravcomp="1">
+        <inertial pos="2.01867e-06 0.0196179 -0.0272426" quat="0.644578 0.764538 0.00106342 5.83972e-05" mass="0.0331994" diaginertia="3.66315e-06 3.46048e-06 2.74469e-06"/>
+        <joint name="index_split" pos="0 0 0" axis="0 0 1" range="1.57 1.57" class="finger"/>
+        <geom type="mesh" rgba="1 0.843 0 1" mesh="index_split"/>
+        <body name="index_bend_3" pos="0 0.045 -0.0365" gravcomp="1">
+          <inertial pos="0 0.0302786 -3.00021e-06" quat="0.707188 0.707026 0 0" mass="0.00454938" diaginertia="2.55133e-06 2.46888e-06 9.45809e-08"/>
+          <joint name="index_bend_3" pos="0 0 0" axis="1 0 0" range="-1.57 1.16" class="finger"/>
+          <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="index_bend_3"/>
+          <body name="index_bend_2" pos="0 0.07 0" gravcomp="1">
+            <inertial pos="-0.000180675 0.03 -0.000190739" quat="0.706203 0.706203 -0.0357435 0.0357435" mass="0.0132915" diaginertia="6.4192e-06 6.29363e-06 7.34581e-07"/>
+            <joint name="index_bend_2" pos="0 0 0" axis="1 0 0" range="-2.61 0" class="finger"/>
+            <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="index_bend_2"/>
+            <body name="index_bend_1" pos="0 0.06 0" gravcomp="1">
+              <inertial pos="0 0.00880992 0" quat="0.707107 0.707107 0 0" mass="0.0013349" diaginertia="8.22112e-08 7.27871e-08 2.94529e-08"/>
+              <joint name="index_bend_1" pos="0 0 0" axis="1 0 0" range="-2.09 0" class="finger"/>
+              <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="index_bend_1"/>
+              <site name="index_tip_site" size="0.0001" rgba="1 0 0 1" pos="0 0.045 0"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="middle_split" pos="-0.085 -0.0417193 -0.086468" quat="0.653281 -0.270598 -0.653281 0.270598" gravcomp="1">
+        <inertial pos="2.02017e-06 0.0196179 -0.0272426" quat="0.644578 0.764538 0.00106342 5.83909e-05" mass="0.0331994" diaginertia="3.66315e-06 3.46048e-06 2.74469e-06"/>
+        <joint name="middle_split" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" class="finger"/>
+        <geom type="mesh" rgba="1 0.843 0 1" mesh="middle_split"/>
+        <body name="middle_bend_3" pos="0 0.045 -0.0365" gravcomp="1">
+          <inertial pos="0 0.0339728 -2.76667e-06" quat="0.707174 0.70704 0 0" mass="0.00493338" diaginertia="3.35947e-06 3.27293e-06 9.97009e-08"/>
+          <joint name="middle_bend_3" pos="0 0 0" axis="1 0 0" range="-1.57 1.15" class="finger"/>
+          <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="middle_bend_3"/>
+          <body name="middle_bend_2" pos="0 0.078 0" gravcomp="1">
+            <inertial pos="-0.000171024 0.0325 -0.000394202" quat="0.70617 0.70617 -0.0363796 0.0363796" mass="0.0140415" diaginertia="7.7654e-06 7.63721e-06 7.65219e-07"/>
+            <joint name="middle_bend_2" pos="0 0 0" axis="1 0 0" range="-2.44 0" class="finger"/>
+            <geom type="mesh" rgba="1 0.843 0 1" mesh="middle_bend_2"/>
+            <body name="middle_bend_1" pos="0 0.065 0" gravcomp="1">
+              <inertial pos="0 0.00880992 7.75712e-12" quat="0.707107 0.707107 0 0" mass="0.0013349" diaginertia="8.22112e-08 7.27871e-08 2.94529e-08"/>
+              <joint name="middle_bend_1" pos="0 0 0" axis="1 0 0" range="-2.09 0" class="finger"/>
+              <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="middle_bend_1"/>
+              <site name="middle_tip_site" size="0.0001" rgba="1 0 0 1" pos="0 0.045 0"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="ring_split" pos="-0.085 -0.0233345 -0.0680833" quat="0.653281 -0.270598 -0.653281 0.270598" gravcomp="1">
+        <inertial pos="2.01959e-06 0.0196179 -0.0272426" quat="0.644578 0.764538 0.00106341 5.84011e-05" mass="0.0331994" diaginertia="3.66315e-06 3.46048e-06 2.74469e-06"/>
+        <joint name="ring_split" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" class="finger"/>
+        <geom type="mesh" rgba="1 0.843 0 1" mesh="ring_split"/>
+        <body name="ring_bend_3" pos="0 0.045 -0.0365" gravcomp="1">
+          <inertial pos="0 0.0316581 -2.90816e-06" quat="0.707182 0.707032 0 0" mass="0.00469338" diaginertia="2.83677e-06 2.75279e-06 9.65009e-08"/>
+          <joint name="ring_bend_3" pos="0 0 0" axis="1 0 0" range="-1.57 1.15" class="finger"/>
+          <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="ring_bend_3"/>
+          <body name="ring_bend_2" pos="0 0.073 0" gravcomp="1">
+            <inertial pos="-0.000180675 0.03 -0.000190739" quat="0.706203 0.706203 -0.0357435 0.0357435" mass="0.0132915" diaginertia="6.4192e-06 6.29363e-06 7.34581e-07"/>
+            <joint name="ring_bend_2" pos="0 0 0" axis="1 0 0" range="-2.61 0" class="finger"/>
+            <geom type="mesh" rgba="1 0.843 0 1" mesh="ring_bend_2"/>
+            <body name="ring_bend_1" pos="0 0.06 0" gravcomp="1">
+              <inertial pos="0 0.00880992 0" quat="0.707107 0.707107 0 0" mass="0.0013349" diaginertia="8.22112e-08 7.27871e-08 2.94529e-08"/>
+              <joint name="ring_bend_1" pos="0 0 0" axis="1 0 0" range="-2.09 0" class="finger"/>
+              <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="ring_bend_1"/>
+              <site name="ring_tip_site" size="0.0001" rgba="1 0 0 1" pos="0 0.045 0"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="pinky_split" pos="-0.085 -0.0049497 -0.049698" quat="0.653281 -0.270597 -0.653283 0.270597" gravcomp="1">
+        <inertial pos="2.02066e-06 0.0196179 -0.0272426" quat="0.644578 0.764537 0.00106342 5.83814e-05" mass="0.0331994" diaginertia="3.66315e-06 3.46048e-06 2.74469e-06"/>
+        <joint name="pinky_split" pos="0 0 0" axis="0 0 1" range="-1.57 1.57" class="finger"/>
+        <geom type="mesh" rgba="1 0.843 0 1" mesh="pinky_split" class="finger"/>
+        <body name="pinky_bend_3" pos="0 0.045 -0.0365" gravcomp="1">
+          <inertial pos="0 0.0279974 -3.1673e-06" quat="0.707198 0.707015 0 0" mass="0.00430938" diaginertia="2.12046e-06 2.04057e-06 9.13809e-08"/>
+          <joint name="pinky_bend_3" pos="0 0 0" axis="1 0 0" range="-1.57 1.14" class="finger"/>
+          <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="pinky_bend_3"/>
+          <body name="pinky_bend_2" pos="0 0.065 0" gravcomp="1">
+            <inertial pos="-0.000191479 0.0275 3.706e-05" quat="0.706227 0.706227 -0.0352657 0.0352657" mass="0.0125415" diaginertia="5.23792e-06 5.11619e-06 7.02709e-07"/>
+            <joint name="pinky_bend_2" pos="0 0 0" axis="1 0 0" range="-2.44 0" class="finger"/>
+            <geom type="mesh" rgba="1 0.843 0 1" mesh="pinky_bend_2"/>
+            <body name="pinky_bend_1" pos="0 0.055 0" gravcomp="1">
+              <inertial pos="0 0.00880992 0" quat="0.707107 0.707107 0 0" mass="0.0013349" diaginertia="8.22112e-08 7.27871e-08 2.94529e-08"/>
+              <joint name="pinky_bend_1" pos="0 0 0" axis="1 0 0" range="-2.09 0" class="finger"/>
+              <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="pinky_bend_1"/>
+              <site name="pinky_tip_site" size="0.0001" rgba="1 0 0 1" pos="0 0.045 0"/>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="thumb_mcp" pos="-0.0475 -0.092589 -0.07964" quat="0.499998 -0.5 -0.500002 0.5" gravcomp="1">
+        <inertial pos="-0.0166424 4.56217e-12 0" quat="0 0.707107 0 0.707107" mass="0.0023739" diaginertia="3.75289e-07 3.63646e-07 4.40152e-08"/>
+        <joint name="thumb_mcp" pos="0 0 0" axis="0 1 0" range="-3.14 1.57" class="thumb"/>
+        <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="thumb_mcp"/>
+        <body name="thumb_split" pos="-0.031 0 0.0075" gravcomp="1">
+          <inertial pos="7.69025e-06 0.0124342 0.00469169" quat="0.746026 0.665916 -0.000293726 0.000952804" mass="0.0433016" diaginertia="7.83009e-06 7.13377e-06 4.98698e-06"/>
+          <joint name="thumb_split" pos="0 0 0" axis="0 0 -1" range="-1.57 1.57" class="thumb"/>
+          <geom type="mesh" rgba="1 0.843 0 1" mesh="thumb_split"/>
+          <body name="thumb_bend_3" pos="0 0.04 -0.0045" gravcomp="1">
+            <inertial pos="0 0.0213294 3.80263e-06" quat="0.706966 0.707248 0 0" mass="0.00358938" diaginertia="1.1359e-06 1.06369e-06 8.17809e-08"/>
+            <joint name="thumb_bend_3" pos="0 0 0" axis="1 0 0" range="-1.57 1.54" class="thumb"/>
+            <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="thumb_bend_3"/>
+            <body name="thumb_bend_2" pos="-0.002 0.05 0" gravcomp="1">
+              <inertial pos="0.00223918 0.02 0.000862215" quat="0.706246 0.706246 0.0348769 -0.0348769" mass="0.0100405" diaginertia="2.58082e-06 2.47797e-06 5.90239e-07"/>
+              <joint name="thumb_bend_2" pos="0 0 0" axis="1 0 0" range="-2.44 0" class="thumb"/>
+              <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="thumb_bend_2"/>
+              <body name="thumb_bend_1" pos="0.002 0.04 0" gravcomp="1">
+                <inertial pos="0 0.00880992 0" quat="0.707107 0.707107 0 0" mass="0.0013349" diaginertia="8.22112e-08 7.27871e-08 2.94529e-08"/>
+                <joint name="thumb_bend_1" pos="0 0 0" axis="1 0 0" range="-1.83 0" class="thumb"/>
+                <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="thumb_bend_1"/>
+                <site name="thumb_tip_site" size="0.0001" rgba="1 0 0 1" pos="0 0.05 0"/>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <light pos="0 0 1.5" directional="true"/>
+    <!-- <geom name="floor" size="1 1 0.01" type="plane" material="grid"/> -->
+    <!-- <geom name="floor" size="1 1 0.01" type="plane" material="groundplane"/> -->
+  </worldbody>
+
+  <contact>
+
+    <exclude body1="palm" body2="index_split"/>
+    <exclude body1="palm" body2="middle_split"/>
+    <exclude body1="palm" body2="ring_split"/>
+    <exclude body1="palm" body2="pinky_split"/>
+    <exclude body1="palm" body2="thumb_split"/>
+    <exclude body1="palm" body2="thumb_mcp"/>
+
+  </contact>
+
+  <actuator>
+    <position name="index_split" joint="index_split" kp="1" ctrlrange="-1.57 1.57"/>
+    <position name="index_bend_3" joint="index_bend_3" kp="1" ctrlrange="-1.57 1.16"/>
+    <position name="index_bend_2" joint="index_bend_2" kp="1" ctrlrange="-2.61 0"/>
+    <position name="index_bend_1" joint="index_bend_1" kp="1" ctrlrange="-2.09 0"/>
+    <position name="middle_split" joint="middle_split" kp="1" ctrlrange="-1.57 1.57"/>
+    <position name="middle_bend_3" joint="middle_bend_3" kp="1" ctrlrange="-1.57 1.15"/>
+    <position name="middle_bend_2" joint="middle_bend_2" kp="1" ctrlrange="-2.44 0"/>
+    <position name="middle_bend_1" joint="middle_bend_1" kp="1" ctrlrange="-2.09 0"/>
+    <position name="ring_split" joint="ring_split" kp="1" ctrlrange="-1.57 1.57"/>
+    <position name="ring_bend_3" joint="ring_bend_3" kp="1" ctrlrange="-1.57 1.15"/>
+    <position name="ring_bend_2" joint="ring_bend_2" kp="1" ctrlrange="-2.61 0"/>
+    <position name="ring_bend_1" joint="ring_bend_1" kp="1" ctrlrange="-2.09 0"/>
+    <position name="pinky_split" joint="pinky_split" kp="1" ctrlrange="-1.57 1.57"/>
+    <position name="pinky_bend_3" joint="pinky_bend_3" kp="1" ctrlrange="-1.57 1.14"/>
+    <position name="pinky_bend_2" joint="pinky_bend_2" kp="1" ctrlrange="-2.44 0"/>
+    <position name="pinky_bend_1" joint="pinky_bend_1" kp="1" ctrlrange="-2.09 0"/>
+    <position name="thumb_mcp" joint="thumb_mcp" kp="1" ctrlrange="-3.14 1.57"/>
+    <position name="thumb_split" joint="thumb_split" kp="1" ctrlrange="-1.57 1.57"/>
+    <position name="thumb_bend_3" joint="thumb_bend_3" kp="1" ctrlrange="-1.57 1.54"/>
+    <position name="thumb_bend_2" joint="thumb_bend_2" kp="1" ctrlrange="-2.44 0"/>
+    <position name="thumb_bend_1" joint="thumb_bend_1" kp="1" ctrlrange="-1.83 0"/>
+  </actuator>
+
+
+</mujoco>

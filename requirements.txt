@@ -1,0 +1,7 @@
+pyserial
+numpy
+dynamixel_sdk
+loop-rate-limiters
+mink
+qpsolvers[quadprog]
+pybind11

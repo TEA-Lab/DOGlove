@@ -6,16 +6,15 @@
 
 ../quick_start/01_pcba.rst
 ../quick_start/02_3d_print.rst
-../quick_start/03_flash_firmware.md
-../quick_start/04_assemble_glove.md
-../quick_start/05_make_it_move.md
+../quick_start/03_flash_firmware.rst
+../quick_start/05_make_it_move.rst
 ```
 
 ## Before You Start
 
 1. Check our [hardware bill of materials (BOM)](#hardware-bill-of-materials) to make sure you have everything.
-2. [Order the PCBA](../quick_start/01_pcba.rst).
-3. [Print the mechanical structures](../quick_start/02_3d_print.rst).
+2. [Order the PCBA](../quick_start/01_pcba).
+3. [Print the mechanical structures](../quick_start/02_3d_print).
 4. The whole system has been tested under **Ubuntu 20.04**.
 
 (hardware-bill-of-materials)=
@@ -29,10 +28,10 @@
 | Bambu Support for PLA/PETG               |        1 |[Bambu Store](https://us.store.bambulab.com/products/support-for-pla-petg)|[Taobao](https://detail.tmall.com/item.htm?abbucket=9&id=813808728827)|
 | Bambu TPU for AMS (White)                |        1 |[Bambu Store](https://us.store.bambulab.com/products/tpu-for-ams?id=43059884720264)|[Taobao](https://detail.tmall.com/item.htm?abbucket=9&id=847975695749&skuId=5633828620351)|
 | **Dynamixel Parts**                      |          |               |                       |
-| Dynamixel XC330-M288-T                   |        2 |[Dynamixel Store](https://www.robotis.us/dynamixel-xc330-m288-t/)|[Taobao](https://item.taobao.com/item.htm?_u=m2pu41081584&id=660146504579&skuId=4941606395637)|
-| Dynamixel XL330-M288-T                   |        3 |[Dynamixel Store](https://www.robotis.us/dynamixel-xl330-m288-t/)|[Taobao](https://item.taobao.com/item.htm?_u=m2pu410853f0&id=648175925849)|
-| ROBOTIS U2D2 USB Communication Converter |        1 |[Dynamixel Store](https://www.robotis.us/u2d2/)|[Taobao](https://item.taobao.com/item.htm?_u=m2pu4108eef4&id=564915402895)|
-| ROBOTIS Cable-X3P 100mm                  |        4 |Temporarily unavailable (non-critical)|[Taobao](https://item.taobao.com/item.htm?_u=m2pu41088bc7&id=559824480883&skuId=3659974074027)|
+| Dynamixel XC330-M288-T                   |        2 |[Dynamixel Store](https://www.robotis.us/dynamixel-xc330-m288-t/)|<a href="https://item.taobao.com/item.htm?_u=m2pu41081584&id=660146504579&skuId=4941606395637">Taobao</a>|
+| Dynamixel XL330-M288-T                   |        3 |[Dynamixel Store](https://www.robotis.us/dynamixel-xl330-m288-t/)|<a href="https://item.taobao.com/item.htm?_u=m2pu410853f0&id=648175925849">Taobao</a>|
+| ROBOTIS U2D2 USB Communication Converter |        1 |[Dynamixel Store](https://www.robotis.us/u2d2/)|<a href="https://item.taobao.com/item.htm?_u=m2pu4108eef4&id=564915402895">Taobao</a>|
+| ROBOTIS Cable-X3P 100mm                  |        4 |Temporarily unavailable (non-critical)|<a href="https://item.taobao.com/item.htm?_u=m2pu41088bc7&id=559824480883&skuId=3659974074027">Taobao</a>|
 | **Mechanical Parts**                     |          |               |                       |
 | M2x10mm Button Head Screw                |       12 |[97763A409](https://www.mcmaster.com/97763A409/)|[M2x10十字圆头](https://detail.tmall.com/item.htm?abbucket=9&id=637524754721&skuId=4742801506990)|
 | M2x12mm Button Head Screw                |       10 |[92095A455](https://www.mcmaster.com/92095A455/)|[M2x12十字圆头](https://detail.tmall.com/item.htm?abbucket=9&id=637524754721&skuId=4742801506984)|
@@ -46,7 +45,7 @@
 | M2 Hex Nut                               |       10 |[90592A075](https://www.mcmaster.com/90592A075/)|[M2六角螺母](https://detail.tmall.com/item.htm?abbucket=9&id=549640610734&skuId=3507734575864)|
 | M3x10mm Button Head Screw                |        2 |[92095A182](https://www.mcmaster.com/92095A182/)|[M3x10十字圆头](https://detail.tmall.com/item.htm?abbucket=9&id=637524754721&skuId=4742801506977)|
 | M3x30mm Button Head Screw                |        2 |[92095A187](https://www.mcmaster.com/92095A187/)|[M3x30十字圆头](https://detail.tmall.com/item.htm?abbucket=9&id=637524754721&skuId=4742801506999)|
-| M3x15mm D-Shape Shaft Screw              |       16 | —             |[Purchase directly from factory](https://item.taobao.com/item.htm?ft=t&id=935960628369)|
+| M3x15mm D-Shape Shaft Screw              |       16 | —             |<a href="https://item.taobao.com/item.htm?ft=t&id=935960628369">Purchase directly from factory</a>|
 | M3x20mm Dual Through Copper Standoff     |        2 |[Amazon](https://www.amazon.com/Csdtylh-Male-Female-Standoff-Stainless-Assortment/dp/B06Y5TJXY1/)|[M3x20双通铜柱](https://detail.tmall.com/item.htm?abbucket=9&id=542213588710&skuId=3258324297349)|
 | M3 Lock Nut                              |       12 |[Amazon](https://www.amazon.com/Yinpecly-Stainless-Self-Locking-Industrial-Construction/dp/B0F1MSSVQP/)|[M3防松螺母](https://detail.tmall.com/item.htm?abbucket=9&id=763443678130&skuId=5740530721046)|
 | M4x10mm Button Head Screw                |       14 |[92095A190](https://www.mcmaster.com/92095A190/)|[M4x10十字圆头](https://detail.tmall.com/item.htm?abbucket=9&id=637524754721&skuId=4742801506971)|
@@ -54,7 +53,7 @@
 | M4x20mm Dual Through Copper Standoff     |        1 |[As provided above](https://www.amazon.com/Standoff-Motherboard-Hexagon-Spacer-Assortment/dp/B09X358Q73/)|[M4x20双通铜柱](https://detail.tmall.com/item.htm?abbucket=9&id=542213588710&skuId=4348642093875)|
 | M4 Thin-Profile Hex Nut                  |        4 |[90710A035](https://www.mcmaster.com/90710A035/)|[M4扁薄六角螺母](https://detail.tmall.com/item.htm?_u=m2pu410880c4&id=533915610076&skuId=4937683182274)|
 | 7x4x2.5mm Bearing                        |       16 |[Amazon](https://www.amazon.com/uxcell-Bearings-4x7x2-5mm-Miniature-Precision/dp/B0CM6RYCC7/)|[MR74-ZZ P5【4x7x2.5】轴承](https://detail.tmall.com/item.htm?_u=m2pu41088525&id=743100333785&skuId=5123565292062)|
-| 0.6mm 7x7 Stainless Steel Wire Rope      | 25ft / 10m |[3461T07](https://www.mcmaster.com/3461T07/)|[钢丝绳](https://item.taobao.com/item.htm?_u=m2pu4108c68a&id=574480300292&skuId=3929526017813)|
+| 0.6mm 7x7 Stainless Steel Wire Rope      | 25ft / 10m |[3461T07](https://www.mcmaster.com/3461T07/)|<a href="https://item.taobao.com/item.htm?_u=m2pu4108c68a&id=574480300292&skuId=3929526017813">钢丝绳</a>|
 | M3x25mm Headless Clevis Pin              |        5 |[93890A703](https://www.mcmaster.com/93890A703/)|[M3x25双头卡簧销轴](https://detail.tmall.com/item.htm?_u=m2pu41084dab&id=755183277159&skuId=5205582448931)|
 | M2 Circlip                               |       10 |[Amazon](https://www.amazon.com/Circlip-External-Retaining-Stainless-Assortment/dp/B0BNB39FKY/)|[M2-e型卡簧挡圈](https://detail.tmall.com/item.htm?_u=m2pu41083fee&id=557748539457&skuId=5002991824253)|
 | M4x25mm Headless Clevis Pin              |        5 |[93890A707](https://www.mcmaster.com/93890A707/)|[M4x25双头卡簧销轴](https://detail.tmall.com/item.htm?_u=m2pu41084dab&id=755183277159&skuId=5205582448938)|
@@ -62,14 +61,14 @@
 | **Electronics**                          |          |               |                       |
 | RDC506 Encoder                           |       16 |[DigiKey](https://www.digikey.com/en/products/detail/alps-alpine/RDC506018A/19529120), [Mouser](https://www.mouser.com/ProductDetail/Alps-Alpine/RDC506018A?qs=j%252B1pi9TdxUZl0Obrq5eEAQ%3D%3D)|[LCSC-RDC506002A](https://item.szlcsc.com/116589.html), [LCSC-RDC506018A](https://item.szlcsc.com/364160.html)|
 | LRA0825 Haptic Motor                     |        5 |[JYLRA0825Z](https://www.digikey.com/en/products/detail/jie-yi-electronics-limited/JYLRA0825Z/22519426), [LRA0825BC-0167F](https://www.digikey.com/en/products/detail/ineed-motor/LRA0825BC-0167F/21840080)|[LCSC-LD0825BC-0169F](https://item.szlcsc.com/6552539.html)|
-| USB to TTL Module                        |        1 |[Amazon](https://www.amazon.com/JESSINIE-Module-CH343-Communication-Microcontroller/dp/B0D6352BS9/)|[nanoUART](https://item.taobao.com/item.htm?_u=m2pu41088297&id=674671646143&skuId=4849832708260)|
+| USB to TTL Module                        |        1 |[Amazon](https://www.amazon.com/JESSINIE-Module-CH343-Communication-Microcontroller/dp/B0D6352BS9/)|<a href="https://item.taobao.com/item.htm?_u=m2pu41088297&id=674671646143&skuId=4849832708260">nanoUART</a>|
 | **Cables**                               |          |               |                       |
-| PH2.0 Pre-Crimped Wire, 15cm (R/Y/B)     |        6 |[Amazon](https://www.amazon.com/Yoeruyo-PH2-0mm-Connector-Pre-Crimped-3Pin-100CM/dp/B0C2HHHNX9/)|[PH2.0镀金单头端子线，电子线15cm，红/黄/黑](https://item.taobao.com/item.htm?_u=m2pu4108e868&id=596387029707&skuId=4317745623497)|
-| PH2.0 Pre-Crimped Wire, 25cm (R/Y/B)     |        5 |[Amazon](https://www.amazon.com/Yoeruyo-PH2-0mm-Connector-Pre-Crimped-3Pin-100CM/dp/B0C2HBL668/)|[PH2.0镀金单头端子线，电子线25cm，红/黄/黑](https://item.taobao.com/item.htm?_u=m2pu4108e868&id=596387029707&skuId=4317745623533)|
-| PH2.0 Pre-Crimped Wire, 30cm (R/Y/B)     |        5 |[Amazon](https://www.amazon.com/Yoeruyo-PH2-0mm-Connector-Pre-Crimped-3Pin-100CM/dp/B0C2HBL668/)|[PH2.0镀金单头端子线，电子线30cm，红/黄/黑](https://item.taobao.com/item.htm?_u=m2pu4108e868&id=596387029707&skuId=4317745623533)|
-| PH2.0-3P Housing                         |       16 |As provided above|[PH2.0-3P胶壳](https://item.taobao.com/item.htm?id=15486830256&spm=a1z09.2.0.0.6b202e8dOSJ2GK&skuId=3283156525609)|
-| SH1.0 Pre-Crimped Wire, 40cm (R/B)       |        5 |[Amazon](https://www.amazon.com/Cermant-SH1-0mm-Pin-Connector-Female/dp/B0DM238Y63/)|[SH1.0镀金单头端子线，特软硅胶线40cm，红/黑](https://item.taobao.com/item.htm?_u=m2pu41080c07&id=595880379976&skuId=4302450046792)|
-| SH1.0-2P Housing                         |        5 |As provided above|[SH1.0-2P胶壳](https://item.taobao.com/item.htm?_u=m2pu41087701&id=595859715531&skuId=4132094928761)|
+| PH2.0 Pre-Crimped Wire, 15cm (R/Y/B)     |        6 |[Amazon](https://www.amazon.com/Yoeruyo-PH2-0mm-Connector-Pre-Crimped-3Pin-100CM/dp/B0C2HHHNX9/)|<a href="https://item.taobao.com/item.htm?_u=m2pu4108e868&id=596387029707&skuId=4317745623497">PH2.0镀金单头端子线，电子线15cm，红/黄/黑</a>|
+| PH2.0 Pre-Crimped Wire, 25cm (R/Y/B)     |        5 |[Amazon](https://www.amazon.com/Yoeruyo-PH2-0mm-Connector-Pre-Crimped-3Pin-100CM/dp/B0C2HBL668/)|<a href="https://item.taobao.com/item.htm?_u=m2pu4108e868&id=596387029707&skuId=4317745623533">PH2.0镀金单头端子线，电子线25cm，红/黄/黑</a>|
+| PH2.0 Pre-Crimped Wire, 30cm (R/Y/B)     |        5 |[Amazon](https://www.amazon.com/Yoeruyo-PH2-0mm-Connector-Pre-Crimped-3Pin-100CM/dp/B0C2HBL668/)|<a href="https://item.taobao.com/item.htm?_u=m2pu4108e868&id=596387029707&skuId=4317745623533">PH2.0镀金单头端子线，电子线30cm，红/黄/黑</a>|
+| PH2.0-3P Housing                         |       16 |As provided above|<a href="https://item.taobao.com/item.htm?id=15486830256&spm=a1z09.2.0.0.6b202e8dOSJ2GK&skuId=3283156525609">PH2.0-3P胶壳</a>|
+| SH1.0 Pre-Crimped Wire, 40cm (R/B)       |        5 |[Amazon](https://www.amazon.com/Cermant-SH1-0mm-Pin-Connector-Female/dp/B0DM238Y63/)|<a href="https://item.taobao.com/item.htm?_u=m2pu41080c07&id=595880379976&skuId=4302450046792">SH1.0镀金单头端子线，特软硅胶线40cm，红/黑</a>|
+| SH1.0-2P Housing                         |        5 |As provided above|<a href="https://item.taobao.com/item.htm?_u=m2pu41087701&id=595859715531&skuId=4132094928761">SH1.0-2P胶壳</a>|
 | USB-A to MicroUSB Cable, 3m              |        1 |[Amazon](https://www.amazon.com/MaGeek-Premium-Samsung-Motorola-Google/dp/B00WEVG57K/)|[JD](https://item.jd.com/100039185783.html)|
 | USB-A to Type-C Cable, 3m                |        1 |[Amazon](https://www.amazon.com/Belkin-BoostCharge-Samsung-Nintendo-Carplay/dp/B08558DD7G/)|[JD](https://item.jd.com/100008391172.html)|
 | **Programming Tools**                    |          |               |                       |
