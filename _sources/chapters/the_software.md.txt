@@ -25,7 +25,7 @@ This section outlines the key components of the software stack for DOGlove, incl
 
   - You can adjust the **vibration pattern** and **duration** using the TI vibration library.
 
-## Pinky Forward and Inverse Kinematics (FK & IK)
+## Forward and Inverse Kinematics (FK & IK)
 
 - Add the **site name** in the corresponding `.xml` file to support FK/IK calculations for the pinky finger.
 
