@@ -179,7 +179,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -207,8 +207,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../quick_start/01_pcba.html">PCB Assembly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quick_start/02_3d_print.html">3D Printing Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../quick_start/03_flash_firmware.html">Flash the Firmware</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quick_start/04_assemble_glove.html">Glove Assembly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../quick_start/05_make_it_move.html">Make it Move</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quick_start/05_make_it_move.html">Make It Move</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="the_hardware.html">Hardware</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Hardware</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -252,7 +251,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -260,7 +259,56 @@
         <article role="main" id="furo-main-content">
           <section id="software">
 <h1>Software<a class="headerlink" href="#software" title="Link to this heading">¶</a></h1>
-<p>🚀 Content coming soon. Thanks for your patience!</p>
+<p>This section outlines the key components of the software stack for DOGlove, including communication protocols, servo control, feedback mechanisms, and calibration.</p>
+<section id="communication-between-pc-and-main-board">
+<h2>Communication Between PC and Main Board<a class="headerlink" href="#communication-between-pc-and-main-board" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>UART Package</strong> – Used for low-level serial communication.</p></li>
+<li><p><strong>Vibration Package</strong> – Responsible for encoding and transmitting vibration feedback.</p></li>
+<li><p><strong>UDP</strong> – Used for real-time data streaming between the glove and host computer.</p></li>
+</ul>
+</section>
+<section id="servo-data-path">
+<h2>Servo Data Path<a class="headerlink" href="#servo-data-path" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>UDP</strong> – Servo position commands and sensor data are transmitted over UDP for low-latency control.</p></li>
+</ul>
+</section>
+<section id="haptic-force-feedback">
+<h2>Haptic + Force Feedback<a class="headerlink" href="#haptic-force-feedback" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Force Sensor Readings</strong> – Captures contact forces at the robot fingertips.</p></li>
+<li><p><strong>Force Feedback Activation Threshold</strong> –<br />
+When the measured force exceeds a preset threshold, force feedback is enabled by turning on <code class="docutils literal notranslate"><span class="pre">servo.torque</span></code>.</p>
+<ul>
+<li><p>To adjust the <em>stiffness</em> of the force feedback, modify the <code class="docutils literal notranslate"><span class="pre">Kp</span></code> gain parameter.</p></li>
+</ul>
+</li>
+<li><p><strong>Vibration Activation Threshold</strong> –<br />
+When a separate threshold is crossed, the MCU sends vibration commands to the glove.</p>
+<ul>
+<li><p>You can adjust the <strong>vibration pattern</strong> and <strong>duration</strong> using the TI vibration library.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="pinky-forward-and-inverse-kinematics-fk-ik">
+<h2>Pinky Forward and Inverse Kinematics (FK &amp; IK)<a class="headerlink" href="#pinky-forward-and-inverse-kinematics-fk-ik" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Add the <strong>site name</strong> in the corresponding <code class="docutils literal notranslate"><span class="pre">.xml</span></code> file to support FK/IK calculations for the pinky finger.</p></li>
+</ul>
+</section>
+<section id="calibration-scale-and-shift">
+<h2>Calibration: Scale and Shift<a class="headerlink" href="#calibration-scale-and-shift" title="Link to this heading">¶</a></h2>
+<p>To ensure realistic hand motion mapping, we apply scale and shift adjustments:</p>
+<ul class="simple">
+<li><p><strong>Finger Length Discrepancy → Scale Factor</strong><br />
+Scale the glove’s finger motion to match the relative lengths of the robotic hand.</p></li>
+<li><p><strong>Finger Distance Discrepancy → Shift Offset</strong><br />
+Adjust for base position differences between fingers to ensure accurate positioning.</p></li>
+</ul>
+<p>The goal is simple: when the real thumb and index finger touch, the robot’s thumb and index should touch as well.</p>
+</section>
 </section>
 
         </article>
@@ -298,8 +346,31 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Software</a><ul>
+<li><a class="reference internal" href="#communication-between-pc-and-main-board">Communication Between PC and Main Board</a></li>
+<li><a class="reference internal" href="#servo-data-path">Servo Data Path</a></li>
+<li><a class="reference internal" href="#haptic-force-feedback">Haptic + Force Feedback</a></li>
+<li><a class="reference internal" href="#pinky-forward-and-inverse-kinematics-fk-ik">Pinky Forward and Inverse Kinematics (FK &amp; IK)</a></li>
+<li><a class="reference internal" href="#calibration-scale-and-shift">Calibration: Scale and Shift</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

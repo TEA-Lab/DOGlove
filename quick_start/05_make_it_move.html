@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Hardware" href="../chapters/the_hardware.html" /><link rel="prev" title="Glove Assembly" href="04_assemble_glove.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Hardware" href="../chapters/the_hardware.html" /><link rel="prev" title="Flash the Firmware" href="03_flash_firmware.html" />
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
-        <title>Make it Move - DOGlove</title>
+        <title>Make It Move - DOGlove</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
@@ -179,7 +179,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -207,8 +207,7 @@
 <li class="toctree-l2"><a class="reference internal" href="01_pcba.html">PCB Assembly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02_3d_print.html">3D Printing Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03_flash_firmware.html">Flash the Firmware</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04_assemble_glove.html">Glove Assembly</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Make it Move</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Make It Move</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chapters/the_hardware.html">Hardware</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Hardware</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -238,7 +237,7 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="../_sources/quick_start/05_make_it_move.md.txt" title="View this page">
+  <a class="muted-link" href="../_sources/quick_start/05_make_it_move.rst.txt" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
@@ -252,15 +251,55 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main" id="furo-main-content">
           <section id="make-it-move">
-<h1>Make it Move<a class="headerlink" href="#make-it-move" title="Link to this heading">¶</a></h1>
-<p>🚀 Content coming soon. Thanks for your patience!</p>
+<span id="id1"></span><h1>Make It Move<a class="headerlink" href="#make-it-move" title="Link to this heading">¶</a></h1>
+<section id="wire-connection">
+<h2>1. Wire Connection<a class="headerlink" href="#wire-connection" title="Link to this heading">¶</a></h2>
+<section id="encoder-connection">
+<h3><strong>Encoder Connection</strong><a class="headerlink" href="#encoder-connection" title="Link to this heading">¶</a></h3>
+<p>Follow the image tutorial below to connect the joint encoders to the corresponding board connector.</p>
+<img alt="Encoder Connection" src="../_images/encoder_connection.jpg" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You should strictly follow the number allocation in the image, otherwise the joint mapping will be incorrect.</p>
+</div>
+</section>
+<section id="servo-connection">
+<h3><strong>Servo Connection</strong><a class="headerlink" href="#servo-connection" title="Link to this heading">¶</a></h3>
+<p>The Dynamixel servo supports chain connection.</p>
+<p>Simply connect the index, middle, ring, and pinky servos together, then use one cable to connect the four servos to <strong>CN2</strong> on the main board. Connect the thumb servo to <strong>CN3</strong> on the main board.</p>
+<img alt="Servo Connection" src="../_images/servo_connection.jpg" />
+<p>Then connect Dynamixel U2D2 to <strong>CN4</strong>.</p>
+<img alt="U2D2 Connection" src="../_images/u2d2_connection.jpg" />
+</section>
+<section id="power-tree">
+<h3><strong>Power Tree</strong><a class="headerlink" href="#power-tree" title="Link to this heading">¶</a></h3>
+<p>The board is powered by DC 5.0V.</p>
+<p>If you use the recommended power supply (<a class="reference external" href="../chapters/getting_started.html">MEAN Well RSP-320-5V Power Supply</a>), simply <strong>short the left two pins of H6 and H7</strong>.</p>
+<img alt="H6 H7 Jumper" src="../_images/h6h7.jpg" />
+<p>This way, both the digital circuit and servos are powered from a single power input CN6. CN6 is an XT30 Male connector.</p>
+<img alt="Power Tree" src="../_images/power.jpg" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>H6 and H7 select the power source for the servos.</p>
+<p>Short the <strong>left two pins</strong> to power the servos from CN6 (same source as the MCU).</p>
+<p>Short the <strong>right two pins</strong> to power the servos independently from CN5.</p>
+</div>
+<p>This design allows you to separate the power supply for the servos and MCU if needed (e.g., when your power supply cannot provide sufficient current for servo stall current).</p>
+</section>
+</section>
+<section id="status-led-check">
+<h2>2. Status LED Check<a class="headerlink" href="#status-led-check" title="Link to this heading">¶</a></h2>
+<p>Hurray! It’s time to power on the whole system!</p>
+<p>Turn on the switch <strong>U33</strong> on the main board. If everything is functioning properly, all the status LEDs should light up.</p>
+<img alt="Status LED" src="../_images/status_led.jpg" />
+</section>
 </section>
 
         </article>
@@ -277,14 +316,14 @@
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="04_assemble_glove.html">
+          <a class="prev-page" href="03_flash_firmware.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Glove Assembly</div>
+                <div class="title">Flash the Firmware</div>
                 
               </div>
             </a>
@@ -306,8 +345,33 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Make It Move</a><ul>
+<li><a class="reference internal" href="#wire-connection">1. Wire Connection</a><ul>
+<li><a class="reference internal" href="#encoder-connection"><strong>Encoder Connection</strong></a></li>
+<li><a class="reference internal" href="#servo-connection"><strong>Servo Connection</strong></a></li>
+<li><a class="reference internal" href="#power-tree"><strong>Power Tree</strong></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#status-led-check">2. Status LED Check</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
