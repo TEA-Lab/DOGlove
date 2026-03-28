@@ -75,8 +75,59 @@ Follow the [official installation guide](https://emanual.robotis.com/docs/en/sof
 conda activate DOGlove
 python servo.py
 python glove_mcu.py
-python DOGlove_FK.py
 ```
+
+### Visualize Glove Status
+```bash
+python fk.py
+```
+
+### Run IK in Simulation
+```bash
+python fk_ik_core.py
+```
+
+**Application Note: New Hand Models**
+
+`model_spec.scale` is a uniform FK-to-IK scale factor applied to all fingertips.
+Tune this first for each model:
+1. Set `model_spec.offset = (0, 0, 0)` and all per-tip adjustments to zero.
+2. Move one finger through a wide range of motion.
+3. Increase `scale` if IK motion amplitude is too small, or decrease it if too large.
+
+Only tune global and per-tip translations after `scale` is close.
+
+**Application Note: Alignment Tuning**
+
+After `scale` is set, tune translation terms in this order:
+1. `model_spec.offset` for global XYZ alignment across all fingertips.
+2. `model_spec.tip_position_adjustments[tip]` for residual per-tip errors.
+
+Use `offset` to correct shared drift across all fingers. Keep per-tip adjustments
+small, and use them only for model-specific fingertip bias.
+
+## 🧰 Useful Tools
+### Record Current Hardware Packets
+```bash
+python tools/udp_record.py --duration <record_time> --output <path, e.g. recordings/udp_capture_test.jsonl>
+```
+Records current packets from hardware.
+
+### Replay Captured Packets
+```bash
+python tools/udp_replay.py --capture <path, e.g. recordings/udp_capture_test.jsonl>
+```
+Substitutes `glove_mcu.py` and `servo.py` with recorded packets to simulate
+hardware movement.
+
+### Render Captured Packets in MuJoCo
+```bash
+python tools/udp_reply_render.py --capture <path, e.g. recordings/udp_capture_test.jsonl>
+```
+Renders recorded packets in MuJoCo.
+
+### Wrist Tracking (Vive Tracker)
+See [tracker.md](./tracker.md)
 
 ## 🏷️ License
 This repository is released under the MIT license. See [LICENSE](LICENSE) for more details.

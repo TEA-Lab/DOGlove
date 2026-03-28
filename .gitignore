@@ -178,3 +178,6 @@ cython_debug/
 
 # Ignore the build directory for Sphinx documentation
 docs/_build/
+
+# Project-specific ignore patterns can be added here
+recordings
