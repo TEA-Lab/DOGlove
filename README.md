@@ -122,7 +122,7 @@ hardware movement.
 
 ### Render Captured Packets in MuJoCo
 ```bash
-python tools/udp_reply_render.py --capture <path, e.g. recordings/udp_capture_test.jsonl>
+python tools/udp_replay_render.py --capture <path, e.g. recordings/udp_capture_test.jsonl>
 ```
 Renders recorded packets in MuJoCo.
 

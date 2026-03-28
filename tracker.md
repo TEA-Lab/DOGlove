@@ -27,7 +27,7 @@ pose_quat = tracker.get_pose_quaternion()    # [x, y, z, qx, qy, qz, qw]
 pose_T = tracker.get_T()                     # 4x4 homogeneous transform
 ```
 
-## Used with the robot control script
+## Use with the robot control script
 
 We uses the tracker in three phases:
 
