@@ -141,12 +141,15 @@ This repository is released under the MIT license. See [LICENSE](LICENSE) for mo
 Contact [Han Zhang](https://doublehan07.github.io/) if you have any questions or suggestions.
 
 ## 📝 Citation
-If you find our work useful, please consider citing:
+If you find our work useful, please cite:
 ```console
-@article{zhang2025doglove,
-  title={DOGlove: Dexterous Manipulation with a Low-Cost Open-Source Haptic Force Feedback Glove},
-  author={Zhang, Han and Hu, Songbo and Yuan, Zhecheng and Xu, Huazhe},
-  journal={arXiv preprint arXiv:2502.07730},
-  year={2025}
+@INPROCEEDINGS{ZhangH-RSS-25, 
+    AUTHOR    = {Han Zhang AND Songbo Hu AND Zhecheng Yuan AND Huazhe Xu}, 
+    TITLE     = {{DOGlove: Dexterous Manipulation with a Low-Cost Open-Source Haptic Force Feedback Glove}}, 
+    BOOKTITLE = {Proceedings of Robotics: Science and Systems}, 
+    YEAR      = {2025}, 
+    ADDRESS   = {LosAngeles, CA, USA}, 
+    MONTH     = {June}, 
+    DOI       = {10.15607/RSS.2025.XXI.104} 
 }
 ```
